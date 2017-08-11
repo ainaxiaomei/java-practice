@@ -13,7 +13,7 @@ import ognl.PropertyAccessor;
  * Hello world!
  *
  */
-public class App 
+public class OgnlTest 
 
 {
 	static class Person {
