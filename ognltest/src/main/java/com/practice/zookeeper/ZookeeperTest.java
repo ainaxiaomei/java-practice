@@ -9,12 +9,28 @@ import org.apache.zookeeper.ZooDefs.Ids;
 import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
 
+
+/**
+ * 1.瞬时节点不能有根节点
+ * 2.瞬时序列节点不能没有父节点
+ * 3.监视器只会触发一次触发过第二次不会再触发
+ * @author vergil
+ *
+ */
 public class ZookeeperTest {
 	public static void main(String[] args) {
 		try {
-			ZooKeeper zk =new ZooKeeper("10.220.10.10:2181,192.168.5.12:2181,192.168.5.151:2181",3000,new MyWatch());
-			zk.create("/root", "123".getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
+			ZooKeeper zk =new ZooKeeper("10.220.10.10:2181,192.168.5.12:2181,192.168.5.151:2181",10000,new MyWatch());
+			MyWatch watch = new MyWatch();
+			if(null == zk.exists("/root", watch)) {
+				zk.create("/root", "123".getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+
+			}
 			
+		
+			zk.create("/root/leader", "a".getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
+			zk.create("/root/leader", "a".getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
+			System.out.println(zk.getSessionId());
 			Stat stat = new Stat();
 			byte[] data = zk.getData("/root", true, stat);
 			System.out.println("data is : " + new String(data));
