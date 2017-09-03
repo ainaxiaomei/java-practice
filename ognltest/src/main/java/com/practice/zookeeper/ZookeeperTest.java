@@ -11,7 +11,7 @@ import org.apache.zookeeper.data.Stat;
 
 
 /**
- * 1.瞬时节点不能有根节点
+ * 1.瞬时节点不能根节点
  * 2.瞬时序列节点不能没有父节点
  * 3.监视器只会触发一次触发过第二次不会再触发
  * @author vergil
