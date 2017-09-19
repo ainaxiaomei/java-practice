@@ -23,7 +23,7 @@ public class PECS {
 
 	public static class Apple extends Fruit {
 
-		@Override
+		@Override 
 		public String toString() {
 			return "Apple";
 		}
@@ -47,7 +47,7 @@ public class PECS {
 		/**
 		 *  <? extends T>可以get但是不能add
 		 */
-		list.get(0);
+		T a = list.get(0);
 		//list.add(elem);//编译报错
 	    // list.add(list.get(0));//编译报错
 		 
@@ -75,7 +75,6 @@ public class PECS {
 		 * super上界get不会报错只是无法使用，除非强转为T类型
 		 */
 		System.out.println(list.get(0));
-		
 		
 		List<? super Apple> ls = new ArrayList<Fruit>();
 		ls.add(new Apple());
