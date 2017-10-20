@@ -146,6 +146,20 @@
 			<version>2.1.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>io.reactivex.rxjava2</groupId>
+			<artifactId>rxjava</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.connectors</groupId>
+			<artifactId>jersey-netty-connector</artifactId>
+			<version>2.26</version>
+			<scope>test</scope>
+		</dependency>
+
+
 	</dependencies>
 	<repositories>
 		<repository>
