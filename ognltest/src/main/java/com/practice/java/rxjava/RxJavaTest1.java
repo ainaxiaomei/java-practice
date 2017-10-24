@@ -121,6 +121,9 @@ public class RxJavaTest1 {
 			
 			@Override
 			public void subscribe(FlowableEmitter<String> e) throws Exception {
+	
+				
+				
 				//默认的发布线程
 				System.out.println("默认的发布线程 : " + Thread.currentThread());
 				e.onNext("one");
