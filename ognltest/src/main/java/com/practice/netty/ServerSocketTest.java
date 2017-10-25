@@ -10,6 +10,12 @@ import javax.net.ServerSocketFactory;
 
 import io.netty.util.CharsetUtil;
 
+/**
+ * 
+ * @author Administrator
+ *  accept()阻塞线程处于runnable状态
+ *  read()无数据时阻塞线程处于runnable状态
+ */
 public class ServerSocketTest {
 	public static void main(String[] args) throws IOException {
 		ServerSocket server = ServerSocketFactory.getDefault().createServerSocket(8889);
