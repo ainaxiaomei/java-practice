@@ -31,7 +31,7 @@ public class ServerSocketTest {
 						System.out.println("get message length : " + length);
 						System.out.println("get message : " + new String(b,CharsetUtil.UTF_8));
 					}
-					
+					  
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
