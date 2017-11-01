@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
+import java.nio.channels.SelectableChannel;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.util.Iterator;
@@ -95,8 +96,16 @@ public class Netty1 {
 				while(itr.hasNext()) {
 					SelectionKey key = itr.next();
 					if(key.isConnectable()) {
-						System.out.println("connected !");
+						itr.remove();
+						System.out.println("connectable !");
+						//System.out.println(channel==key.channel());//true
+						channel.finishConnect();
 					}
+					
+					if(key.isAcceptable()){
+						System.out.println("accpeted!");
+					}
+					
 					
 					if(key.isReadable()) {
 						System.out.println("start read ...");
@@ -122,6 +131,52 @@ public class Netty1 {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	@Test
+	public void testNIO2() throws IOException{
+		java.nio.channels.SocketChannel channel = java.nio.channels.SocketChannel.open();
+		channel.configureBlocking(false);
+		Selector selector = Selector.open();
+		
+		if(channel.connect(new InetSocketAddress(8888))){
+			channel.register(selector, SelectionKey.OP_READ|SelectionKey.OP_WRITE);
+		}else{
+			channel.register(selector, SelectionKey.OP_CONNECT);
+		}
+		
+		while(true){
+			selector.select();
+			Iterator<SelectionKey> itr = selector.selectedKeys().iterator();
+			while(itr.hasNext()){
+				SelectionKey key = itr.next();
+				itr.remove();
+				
+				if(key.isConnectable()){
+					java.nio.channels.SocketChannel chan = (java.nio.channels.SocketChannel)key.channel();
+					if(chan.finishConnect()){
+						System.out.println("connected !");
+						chan.register(selector, SelectionKey.OP_READ|SelectionKey.OP_WRITE);
+					}else{
+						System.out.println("连接失败!");
+					}
+				}
+				
+				if(key.isWritable()){
+					System.out.println("write !");
+				}
+				
+				if(key.isReadable()){
+					
+					System.out.println("read !");
+					
+				}
+			}
+			
+		}
+		
+		
+		
 	}
 
 }
