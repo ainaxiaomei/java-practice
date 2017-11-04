@@ -17,7 +17,9 @@ import javax.servlet.http.HttpServletResponse;
 public class AsyncServlet extends HttpServlet {
 
 	/**
-	 * 
+	 * 异步servlet可以把耗时的工作隔离到业务线程执行
+	 * 而不需要占用容器的线程。使用request.startAsync()
+	 * 获取AsyncContext
 	 */
 	private static final long serialVersionUID = 1L;
 
