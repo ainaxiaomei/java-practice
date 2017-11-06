@@ -44,8 +44,8 @@ public class SyncServlet extends HttpServlet {
 		public void run() {
 			try {
 				TimeUnit.SECONDS.sleep(2);
-				System.out.println(Thread.currentThread() + "In Sync ...");
-				res.getWriter().println("Hello Sync !" + Thread.currentThread());
+				System.out.println(Thread.currentThread() + " " + res.toString() + "In Sync ...");
+				res.getWriter().println("Hello Sync ! " + Thread.currentThread() + " " + res.toString());
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
