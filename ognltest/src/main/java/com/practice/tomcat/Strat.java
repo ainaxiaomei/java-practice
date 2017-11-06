@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.WebResourceRoot;
+import org.apache.catalina.Wrapper;
 import org.apache.catalina.core.StandardContext;
 import org.apache.catalina.startup.Tomcat;
 import org.apache.catalina.webresources.DirResourceSet;
@@ -24,7 +25,7 @@ import org.glassfish.jersey.server.ResourceConfig;
  */
 public class Strat {
 	public static void main(String[] args) throws LifecycleException, ServletException {
-		String webappDirLocation = "G:\\vergil\\web";
+		String webappDirLocation = "D:\\webapp";
 		Tomcat tomcat = new Tomcat();
 		tomcat.setPort(8787);
 		StandardContext context = (StandardContext) tomcat.addWebapp("/javaTest", webappDirLocation);
@@ -38,18 +39,36 @@ public class Strat {
 		// additionWebInfClasses.getAbsolutePath(), "/"));
 		// ctx.setResources(resources);
 		context.addApplicationLifecycleListener(new FirstListener());
+		
+		/**
+		 * 异步servlet
+		 */
 		tomcat.addServlet("/javaTest", "asyncServlet", new AsyncServlet());
 		context.addServletMapping("/async", "asyncServlet");
 
+		/**
+		 * 同步servlet
+		 */
 		tomcat.addServlet("/javaTest", "syncServlet", new SyncServlet());
 		context.addServletMapping("/sync", "syncServlet");
-		tomcat.addServlet("/javaTest", "jesery", "org.glassfish.jersey.servlet.ServletContainer");
-		context.addServletMapping("/jesery/*", "jesery");
+		
+		/**
+		 * jersey普通资源
+		 */
+		Wrapper wrapper =  tomcat.addServlet("/javaTest", "jersey", "org.glassfish.jersey.servlet.ServletContainer");
+		context.addServletMapping("/jersey/*", "jersey");
+		
+		/**
+		 * 使用jersey包扫描,包名不能加.*不然不能识别
+		 */
+		wrapper.addInitParameter("jersey.config.server.provider.packages", "com.practice.tomcat");
+		
+		/**
+		 * 直接指定一个jersey资源类
+		 */
+		//wrapper.addInitParameter("jersey.config.server.provider.classnames", "com.practice.tomcat.JerseyResource");
+		
 
-		ApplicationParameter parameter = new ApplicationParameter();
-		parameter.setName("jersey.config.server.provider.packages");
-		parameter.setValue("com.practice.tomcat");
-		context.addApplicationParameter(parameter);
 		tomcat.start();
 		tomcat.getServer().await();
 

@@ -58,7 +58,7 @@
 		<dependency>
 			<groupId>org.glassfish.jersey.core</groupId>
 			<artifactId>jersey-client</artifactId>
-			<version>2.26</version>
+			<version>2.26-b03</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -68,27 +68,28 @@
 		<dependency>
 			<groupId>org.glassfish.jersey.ext.rx</groupId>
 			<artifactId>jersey-rx-client-rxjava2</artifactId>
-			<version>2.26</version>
+			<version>2.26-b03</version>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.ext.rx</groupId>
 			<artifactId>jersey-rx-client-rxjava</artifactId>
-			<version>2.26</version>
+			<version>2.26-b03</version>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.core</groupId>
 			<artifactId>jersey-server</artifactId>
-			<version>2.26</version>
+			<version>2.26-b03</version>
 		</dependency>
+	
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet-core</artifactId>
-			<version>2.26</version>
+			<version>2.26-b03</version>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet</artifactId>
-			<version>2.26</version>
+			<version>2.26-b03</version>
 		</dependency>
 		<dependency>
 			<groupId>io.netty</groupId>
@@ -201,7 +202,7 @@
 		<dependency>
 			<groupId>org.glassfish.jersey.connectors</groupId>
 			<artifactId>jersey-netty-connector</artifactId>
-			<version>2.26</version>
+			<version>2.26-b03</version>
 			<scope>test</scope>
 		</dependency>
 
