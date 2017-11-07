@@ -57,7 +57,7 @@ public class Strat {
 		 */
 		Wrapper wrapper =  tomcat.addServlet("/javaTest", "jersey", "org.glassfish.jersey.servlet.ServletContainer");
 		context.addServletMapping("/jersey/*", "jersey");
-		
+		wrapper.setAsyncSupported(true);
 		/**
 		 * 使用jersey包扫描,包名不能加.*不然不能识别
 		 */
