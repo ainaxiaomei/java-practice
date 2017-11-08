@@ -53,7 +53,7 @@ public class Strat {
 		context.addServletMapping("/sync", "syncServlet");
 		
 		/**
-		 * jersey普通资源
+		 * 指定jersey核心servlet
 		 */
 		Wrapper wrapper =  tomcat.addServlet("/javaTest", "jersey", "org.glassfish.jersey.servlet.ServletContainer");
 		context.addServletMapping("/jersey/*", "jersey");

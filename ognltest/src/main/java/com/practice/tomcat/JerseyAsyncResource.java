@@ -15,7 +15,7 @@ import javax.ws.rs.container.Suspended;
  *
  */
 @Path(value = "/async")
-public class AsyncJerseyResource {
+public class JerseyAsyncResource {
 	
 	@Path("/echo")
 	@GET
