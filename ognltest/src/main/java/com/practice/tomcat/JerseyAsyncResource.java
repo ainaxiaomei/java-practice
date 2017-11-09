@@ -19,6 +19,7 @@ public class JerseyAsyncResource {
 	
 	@Path("/echo")
 	@GET
+	@Async
 	public void async(@Suspended AsyncResponse response){
 		
 		new Thread(new Runnable() {
