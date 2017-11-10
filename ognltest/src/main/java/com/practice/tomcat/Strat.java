@@ -13,6 +13,9 @@ import org.apache.catalina.startup.Tomcat;
 import org.apache.catalina.webresources.DirResourceSet;
 import org.apache.catalina.webresources.StandardRoot;
 import org.apache.tomcat.util.descriptor.web.ApplicationParameter;
+import org.apache.tomcat.util.descriptor.web.LoginConfig;
+import org.apache.tomcat.util.descriptor.web.SecurityCollection;
+import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
 import org.glassfish.jersey.model.ContractProvider;
 import org.glassfish.jersey.model.internal.ComponentBag;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -28,6 +31,7 @@ public class Strat {
 		String webappDirLocation = "D:\\webapp";
 		Tomcat tomcat = new Tomcat();
 		tomcat.setPort(8787);
+		
 		StandardContext context = (StandardContext) tomcat.addWebapp("/javaTest", webappDirLocation);
 		System.out.println("configuring app with basedir: " + new File("./" + webappDirLocation).getAbsolutePath());
 
@@ -39,6 +43,27 @@ public class Strat {
 		// additionWebInfClasses.getAbsolutePath(), "/"));
 		// ctx.setResources(resources);
 		context.addApplicationLifecycleListener(new FirstListener());
+		
+		
+		/**
+		 * java EE的安全机制使用编程方式实现，在jesery中不会经过过滤器包括前置过滤器
+		 */
+//		SecurityConstraint constraint = new SecurityConstraint();
+//		
+//		SecurityCollection collection = new SecurityCollection();
+//		collection.addPattern("/jersey/async/*");
+//		constraint.addCollection(collection);
+//		
+//		constraint.addAuthRole("sunqi");
+//		context.addConstraint(constraint);
+		
+		/**
+		 * 设置认证机制为
+		 */
+//		LoginConfig config = new LoginConfig();
+//		config.setAuthMethod("BASIC");
+//		context.setLoginConfig(config);
+		
 		
 		/**
 		 * 异步servlet
@@ -58,6 +83,13 @@ public class Strat {
 		Wrapper wrapper =  tomcat.addServlet("/javaTest", "jersey", "org.glassfish.jersey.servlet.ServletContainer");
 		context.addServletMapping("/jersey/*", "jersey");
 		wrapper.setAsyncSupported(true);
+		
+		/**
+		 * 编程式的注册
+		 */
+		
+		wrapper.addInitParameter("javax.ws.rs.Application", "com.practice.tomcat.JerseyApplication");
+		
 		/**
 		 * 使用jersey包扫描,包名不能加.*不然不能识别
 		 */
