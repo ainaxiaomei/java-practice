@@ -11,7 +11,7 @@ public class Start {
 	public static void main(String[] args) throws ServletException, LifecycleException {
 		Tomcat tomcat = new Tomcat();
 		tomcat.setPort(8787);
-		Context context = tomcat.addWebapp("/tomcat-spring", "D:\\webapp");
+		Context context = tomcat.addWebapp("/tomcat-spring", "G:\\vergil\\web");
 		/**
 		 * 设置spring listener
 		 */
