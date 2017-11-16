@@ -9,9 +9,11 @@ import org.apache.tomcat.util.descriptor.web.ApplicationParameter;
 
 public class Start {
 	public static void main(String[] args) throws ServletException, LifecycleException {
+		
 		Tomcat tomcat = new Tomcat();
 		tomcat.setPort(8787);
-		Context context = tomcat.addWebapp("/tomcat-spring", "G:\\vergil\\web");
+		Context context = tomcat.addWebapp("/tomcat-spring", "D:\\webapp");
+		
 		/**
 		 * 设置spring listener
 		 */
@@ -25,6 +27,12 @@ public class Start {
 		contextClass.setName("contextClass");
 		contextClass.setValue("org.springframework.web.context.support.AnnotationConfigWebApplicationContext");
 		context.addApplicationParameter(contextClass);
+		
+		/**
+		 * 添加springsessionservlet
+		 */
+		tomcat.addServlet("/tomcat-spring", "springSessionServlet", "com.practice.tomcat.spring.SpringSessionServlet");
+		context.addServletMapping("/session", "springSessionServlet");
 		
 		/**
 		 * 指定配置文件类
