@@ -17,6 +17,7 @@ public class SpringSessionServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
+		System.out.println("所有Filter : " + req.getServletContext());
 		System.out.println("经过SessionRepositoryRequestWrapper过滤器后的request :" + req.getClass());
 		resp.getWriter().println("Hello Spring Session !");
 		

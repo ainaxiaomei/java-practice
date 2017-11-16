@@ -12,7 +12,7 @@ public class WebConfiguration {
 	@Bean
     public JedisConnectionFactory  connectionFactory() {
 		JedisConnectionFactory  factory = new JedisConnectionFactory ();
-		factory.setHostName("10.220.10.10");
+		factory.setHostName("192.168.162.127");
 		return factory;
     }
 }
