@@ -12,14 +12,12 @@ public class Start {
 		
 		Tomcat tomcat = new Tomcat();
 		tomcat.setPort(8787);
-		Context context = tomcat.addWebapp("/tomcat-spring", "G:\\vergil\\web");
+		Context context = tomcat.addWebapp("/tomcat-spring", "D:\\webapp");
 		
 		/**
 		 * 设置spring listener
 		 */
 		context.addApplicationListener("org.springframework.web.context.ContextLoaderListener");
-		
-		
 		/**
 		 * 指定applicationContext
 		 */
