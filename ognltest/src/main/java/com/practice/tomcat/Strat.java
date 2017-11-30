@@ -35,13 +35,6 @@ public class Strat {
 		StandardContext context = (StandardContext) tomcat.addWebapp("/javaTest", webappDirLocation);
 		System.out.println("configuring app with basedir: " + new File("./" + webappDirLocation).getAbsolutePath());
 
-		// Declare an alternative location for your "WEB-INF/classes" dir
-		// Servlet 3.0 annotation will work
-		// File additionWebInfClasses = new File("target/classes");
-		// WebResourceRoot resources = new StandardRoot(ctx);
-		// resources.addPreResources(new DirResourceSet(resources, "/WEB-INF/classes",
-		// additionWebInfClasses.getAbsolutePath(), "/"));
-		// ctx.setResources(resources);
 		context.addApplicationLifecycleListener(new FirstListener());
 		
 		

@@ -26,6 +26,9 @@ public class AsyncServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		 ExecutorService exector = (ExecutorService) req.getServletContext().getAttribute("BUSSINESS_EXECTOR");
+		 
+		 System.out.println(req.getServletContext().getClass());
+		 System.out.println(req.getSession().getClass());
 		 AsyncContext asyncContext = req.startAsync();
 		 asyncContext.setTimeout(5000);
 		 asyncContext.addListener(new AsyncListener() {
