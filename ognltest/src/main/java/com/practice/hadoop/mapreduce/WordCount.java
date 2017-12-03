@@ -21,7 +21,7 @@ public class WordCount {
 		@Override
 		protected void map(Object key, Text value, Mapper<Object, Text, Text, IntWritable>.Context context)
 				throws IOException, InterruptedException {
-			StringTokenizer split = new StringTokenizer(value.toString(), "");
+			StringTokenizer split = new StringTokenizer(value.toString(), " ");
 			IntWritable one = new IntWritable(1);
 			if(split.hasMoreTokens()) {
 				String word = split.nextToken();
@@ -33,11 +33,11 @@ public class WordCount {
 		
 	}
 	
-	static class WCReducer extends Reducer<String, IntWritable, String, IntWritable>{
+	static class WCReducer extends Reducer<Text, IntWritable, Text, IntWritable>{
 
 		@Override
-		protected void reduce(String key, Iterable<IntWritable> list,
-				Reducer<String, IntWritable, String, IntWritable>.Context context) throws IOException, InterruptedException {
+		protected void reduce(Text key, Iterable<IntWritable> list,
+				Reducer<Text, IntWritable, Text, IntWritable>.Context context) throws IOException, InterruptedException {
 			
 			int sum = 0;
 			while(list.iterator().hasNext()) {
