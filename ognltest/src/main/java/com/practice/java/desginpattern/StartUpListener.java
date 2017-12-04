@@ -1,4 +1,4 @@
-package com.practice.java.pattern;
+package com.practice.java.desginpattern;
 
 import java.util.Observable;
 import java.util.Observer;
