@@ -36,8 +36,6 @@ public class JDKProxy {
 
 }
 
-interface Probe {
-	public String getProbeData();
-}
+
 
 

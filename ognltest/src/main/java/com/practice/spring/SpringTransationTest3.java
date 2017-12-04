@@ -1,4 +1,4 @@
-package com.practice.java;
+package com.practice.spring;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,4 +1,4 @@
-package com.practice.java;
+package com.practice.ognl;
 
 import java.util.HashMap;
 import java.util.Map;

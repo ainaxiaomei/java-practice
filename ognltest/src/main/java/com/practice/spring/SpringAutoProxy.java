@@ -1,4 +1,4 @@
-package com.practice.java;
+package com.practice.spring;
 
 import java.lang.reflect.Method;
 
@@ -11,6 +11,9 @@ import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
+import com.practice.java.Probe;
+import com.practice.java.ProbeImpl;
 
 public class SpringAutoProxy {
 	public static void main(String[] args) {
