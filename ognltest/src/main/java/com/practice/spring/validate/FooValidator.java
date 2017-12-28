@@ -4,6 +4,11 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
+/**
+ * 基于spring验证接口的验证器
+ * @author vergil
+ *
+ */
 public class FooValidator implements Validator {
 
 	@Override
