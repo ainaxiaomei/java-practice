@@ -33,6 +33,7 @@ public class Start {
 		 BeanWrapper wrapper = new BeanWrapperImpl(foo);
 		 wrapper.setPropertyValue("friend[0]","mxm");
 		 wrapper.setPropertyValue("friend[1]","pt");
+		 
 		 ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
 		 System.out.println("ValidatorFactory 的类型是 ： " + factory.getClass());
 		 Set<ConstraintViolation<Foo>> res = factory.getValidator().validate(foo);
