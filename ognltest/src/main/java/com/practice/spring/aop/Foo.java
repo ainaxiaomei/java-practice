@@ -1,6 +1,9 @@
-package com.practice.spring.ng;
+package com.practice.spring.aop;
 
-public class Bar implements IBar {
+import org.springframework.stereotype.Component;
+
+@Component
+public class Foo implements IFoo {
 	
 	private String name;
 	
@@ -16,7 +19,7 @@ public class Bar implements IBar {
 
 
 	@Override
-	public String doBusiness() {
+	public String doBusiness(int arg) {
 		System.out.println("do business in " + getClass());
 		return "Foo";
 	}

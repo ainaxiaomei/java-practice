@@ -1,4 +1,4 @@
-package com.practice.spring.ng;
+package com.practice.spring.aop;
 
 import static org.junit.Assert.assertTrue;
 
@@ -12,7 +12,7 @@ public class Start {
 	
     @Before
     public void init(){
-		context = new AnnotationConfigApplicationContext("com.practice.spring.ng");
+		context = new AnnotationConfigApplicationContext("com.practice.spring.aop");
 
     }
     

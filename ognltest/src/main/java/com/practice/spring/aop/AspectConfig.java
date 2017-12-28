@@ -1,4 +1,4 @@
-package com.practice.spring.ng;
+package com.practice.spring.aop;
 
 import java.util.Arrays;
 
@@ -17,7 +17,7 @@ public class AspectConfig {
 	 * 1.通过注入joinpoint对象
 	 * 2.通过表达式的arg
 	 */
-	@Before(value = "execution(public * com.practice.spring.ng.Foo.doBusiness(..)) && args(arg,..)")
+	@Before(value = "execution(public * com.practice.spring.aop.Foo.doBusiness(..)) && args(arg,..)")
 	public void beforeDoBusiness(JoinPoint joinPoint,int arg){
 		System.out.println(joinPoint);
 		System.out.println("before execute " + joinPoint.getSignature().getName() + "\n"

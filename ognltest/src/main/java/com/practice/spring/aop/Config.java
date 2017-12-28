@@ -1,4 +1,4 @@
-package com.practice.spring.ng;
+package com.practice.spring.aop;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

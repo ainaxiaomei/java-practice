@@ -1,4 +1,4 @@
-package com.practice.spring.ng;
+package com.practice.spring.aop;
 
 public interface IBar {
 
