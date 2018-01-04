@@ -28,10 +28,9 @@ import org.glassfish.jersey.server.ResourceConfig;
  */
 public class Strat {
 	public static void main(String[] args) throws LifecycleException, ServletException {
-		String webappDirLocation = "D:\\webapp";
+		String webappDirLocation = "G:\\VirtualStore";
 		Tomcat tomcat = new Tomcat();
 		tomcat.setPort(8787);
-		
 		StandardContext context = (StandardContext) tomcat.addWebapp("/javaTest", webappDirLocation);
 		System.out.println("configuring app with basedir: " + new File("./" + webappDirLocation).getAbsolutePath());
 
@@ -93,7 +92,6 @@ public class Strat {
 		 */
 		//wrapper.addInitParameter("jersey.config.server.provider.classnames", "com.practice.tomcat.JerseyResource");
 		
-
 		tomcat.start();
 		tomcat.getServer().await();
 
