@@ -1,0 +1,567 @@
+2976 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Client environment:java.library.path=D:\program\jdk1.8\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;D:\program\jdk1.8\jre\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\program\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;D:\program\spring-1.3.5.RELEASE\bin;D:\program\Cygwin\bin;D:\program\mysql-5.6.24-winx64.1432007928\mysql-5.6.24-winx64\bin;D:\program\jdk1.8\bin;D:\program\nodejs\;D:\program\OpenVPN\bin;D:\program\tortiosegit\bin;D:\program\Git\cmd;D:\program\go\bin;D:\program\cmake\bin;D:\program\Git\bin;D:\Documents\Downloads\consul_0.6.4_windows_amd64;C:\Users\Administrator\AppData\Roaming\npm;D:\program\cmake\bin;D:\program\GnuWin32\bin;.
+2976 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+2976 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Client environment:java.compiler=<NA>
+2976 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Client environment:os.name=Windows 7
+2976 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Client environment:os.arch=amd64
+2976 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Client environment:os.version=6.1
+2976 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Client environment:user.name=Administrator
+2976 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Client environment:user.home=C:\Users\Administrator
+2976 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Client environment:user.dir=D:\workspace\javapractice\java-practice\ognltest
+2976 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@2bc59ab7
+2990 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+2990 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+2990 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3198
+2993 [main] INFO  o.a.s.b.FileBlobStoreImpl - Creating new blob store based in C:\Users\ADMINI~1\AppData\Local\Temp\e3af5b33-c772-4823-b9b7-7ec3071b6530\blobs
+2995 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3198
+2997 [main] INFO  o.a.s.d.nimbus - Using default scheduler
+2997 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.p.FileTxnLog - Creating new log file: log.1
+2998 [main] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+2998 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000 sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@1a4cbcc6
+3000 [main] INFO  o.a.s.n.NimbusInfo - Nimbus figures out its name to snail-z97
+3002 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+3003 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+3003 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3201
+3004 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3201
+3010 [main] INFO  o.a.s.n.NimbusInfo - Nimbus figures out its name to snail-z97
+3013 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d50000 with negotiated timeout 20000 for client /127.0.0.1:3198
+3014 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d50000, negotiated timeout = 20000
+3017 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3019 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d50001 with negotiated timeout 20000 for client /127.0.0.1:3201
+3023 [main] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+3023 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000 sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@7e20f4e3
+3024 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d50001, negotiated timeout = 20000
+3024 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3025 [main-EventThread] INFO  o.a.s.zookeeper - Zookeeper state update: :connected:none
+3028 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+3031 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3204
+3031 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+3033 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3204
+3038 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d50002 with negotiated timeout 20000 for client /127.0.0.1:3204
+3039 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d50002, negotiated timeout = 20000
+3039 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3039 [main-EventThread] INFO  o.a.s.zookeeper - Zookeeper state update: :connected:none
+3061 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+3063 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d50002
+3069 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+3069 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d50002 closed
+3070 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3204 which had sessionid 0x160c031f0d50002
+3071 [main] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+3071 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@7793b55d
+3072 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+3073 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+3073 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3207
+3073 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3207
+3074 [main] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+3074 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@4b22214d
+3075 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+3075 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+3075 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3210
+3076 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3210
+3078 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d50003 with negotiated timeout 20000 for client /127.0.0.1:3207
+3078 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d50003, negotiated timeout = 20000
+3078 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3082 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d50004 with negotiated timeout 20000 for client /127.0.0.1:3210
+3083 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d50004, negotiated timeout = 20000
+3083 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3169 [main] INFO  o.a.s.zookeeper - Queued up for leader lock.
+3174 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x160c031f0d50001 type:create cxid:0x1 zxid:0x12 txntype:-1 reqpath:n/a Error Path:/storm/leader-lock Error:KeeperErrorCode = NoNode for /storm/leader-lock
+3180 [Curator-Framework-0] WARN  o.a.s.s.o.a.c.u.ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+3189 [main] INFO  o.a.s.d.m.MetricsUtils - Using statistics reporter plugin:org.apache.storm.daemon.metrics.reporters.JmxPreparableReporter
+3190 [main] INFO  o.a.s.d.m.r.JmxPreparableReporter - Preparing...
+3197 [main] INFO  o.a.s.d.common - Started statistics report plugin...
+3207 [main] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+3207 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000 sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@5f82209e
+3208 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+3209 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+3209 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3213
+3209 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3213
+3214 [main-EventThread] INFO  o.a.s.z.Zookeeper - active-topology-blobs [] local-topology-blobs [] diff-topology-blobs []
+3214 [main-EventThread] INFO  o.a.s.z.Zookeeper - active-topology-dependencies [] local-blobs [] diff-topology-dependencies []
+3214 [main-EventThread] INFO  o.a.s.z.Zookeeper - Accepting leadership, all active topologies and corresponding dependencies found locally.
+3216 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d50005 with negotiated timeout 20000 for client /127.0.0.1:3213
+3216 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d50005, negotiated timeout = 20000
+3216 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3216 [main-EventThread] INFO  o.a.s.zookeeper - Zookeeper state update: :connected:none
+3217 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+3218 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d50005
+3222 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d50005 closed
+3222 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+3223 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3213 which had sessionid 0x160c031f0d50005
+3223 [main] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+3223 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@633a11eb
+3224 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+3224 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+3224 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3216
+3224 [main] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+3225 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000 sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@1c8e2850
+3225 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3216
+3226 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+3226 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+3226 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3219
+3227 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3219
+3230 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d50006 with negotiated timeout 20000 for client /127.0.0.1:3216
+3230 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d50006, negotiated timeout = 20000
+3230 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3236 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d50007 with negotiated timeout 20000 for client /127.0.0.1:3219
+3236 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d50007, negotiated timeout = 20000
+3236 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3236 [main-EventThread] INFO  o.a.s.zookeeper - Zookeeper state update: :connected:none
+3237 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+3237 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d50007
+3244 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+3244 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d50007 closed
+3244 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3219 which had sessionid 0x160c031f0d50007
+3244 [main] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+3245 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@99223ac
+3246 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+3246 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+3246 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3222
+3246 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3222
+3251 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d50008 with negotiated timeout 20000 for client /127.0.0.1:3222
+3251 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d50008, negotiated timeout = 20000
+3251 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3272 [main] INFO  o.a.s.z.Zookeeper - Staring ZK Curator
+3272 [main] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+3272 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000 sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@415262a0
+3273 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+3274 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+3274 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3225
+3274 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3225
+3278 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d50009 with negotiated timeout 20000 for client /127.0.0.1:3225
+3278 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d50009, negotiated timeout = 20000
+3278 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3279 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+3280 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d50009
+3286 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+3286 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d50009 closed
+3286 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3225 which had sessionid 0x160c031f0d50009
+3287 [main] INFO  o.a.s.z.Zookeeper - Staring ZK Curator
+3287 [main] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+3287 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@1534bdc6
+3288 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+3289 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+3289 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3228
+3289 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3228
+3296 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d5000a with negotiated timeout 20000 for client /127.0.0.1:3228
+3296 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d5000a, negotiated timeout = 20000
+3296 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3302 [main] INFO  o.a.s.l.Localizer - Reconstruct localized resource: C:\Users\ADMINI~1\AppData\Local\Temp\b0409fdf-8c65-48a9-923a-9a51641b7fa6\supervisor\usercache
+3303 [main] WARN  o.a.s.l.Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\b0409fdf-8c65-48a9-923a-9a51641b7fa6\supervisor\usercache
+3307 [main] INFO  o.a.s.d.s.Supervisor - Starting Supervisor with conf {topology.builtin.metrics.bucket.size.secs=60, nimbus.childopts=-Xmx1024m, ui.filter.params=null, storm.cluster.mode=local, storm.messaging.netty.client_worker_threads=1, logviewer.max.per.worker.logs.size.mb=2048, supervisor.run.worker.as.user=false, topology.max.task.parallelism=null, topology.priority=29, zmq.threads=1, storm.group.mapping.service=org.apache.storm.security.auth.ShellBasedGroupsMapping, transactional.zookeeper.root=/transactional, topology.sleep.spout.wait.strategy.time.ms=1, scheduler.display.resource=false, topology.max.replication.wait.time.sec=60, drpc.invocations.port=3773, supervisor.localizer.cache.target.size.mb=10240, topology.multilang.serializer=org.apache.storm.multilang.JsonSerializer, storm.messaging.netty.server_worker_threads=1, nimbus.blobstore.class=org.apache.storm.blobstore.LocalFsBlobStore, resource.aware.scheduler.eviction.strategy=org.apache.storm.scheduler.resource.strategies.eviction.DefaultEvictionStrategy, topology.max.error.report.per.interval=5, storm.thrift.transport=org.apache.storm.security.auth.SimpleTransportPlugin, zmq.hwm=0, storm.group.mapping.service.params=null, worker.profiler.enabled=false, storm.principal.tolocal=org.apache.storm.security.auth.DefaultPrincipalToLocal, supervisor.worker.shutdown.sleep.secs=3, pacemaker.host=localhost, storm.zookeeper.retry.times=5, ui.actions.enabled=true, zmq.linger.millis=0, supervisor.enable=true, topology.stats.sample.rate=0.05, storm.messaging.netty.min_wait_ms=100, worker.log.level.reset.poll.secs=30, storm.zookeeper.port=2000, supervisor.heartbeat.frequency.secs=5, topology.enable.message.timeouts=true, supervisor.cpu.capacity=400.0, drpc.worker.threads=64, supervisor.blobstore.download.thread.count=5, task.backpressure.poll.secs=30, drpc.queue.size=128, topology.backpressure.enable=false, supervisor.blobstore.class=org.apache.storm.blobstore.NimbusBlobStore, storm.blobstore.inputstream.buffer.size.bytes=65536, topology.shellbolt.max.pending=100, drpc.https.keystore.password=, nimbus.code.sync.freq.secs=120, logviewer.port=8000, topology.scheduler.strategy=org.apache.storm.scheduler.resource.strategies.scheduling.DefaultResourceAwareStrategy, topology.executor.send.buffer.size=1024, resource.aware.scheduler.priority.strategy=org.apache.storm.scheduler.resource.strategies.priority.DefaultSchedulingPriorityStrategy, pacemaker.auth.method=NONE, storm.daemon.metrics.reporter.plugins=[org.apache.storm.daemon.metrics.reporters.JmxPreparableReporter], topology.worker.logwriter.childopts=-Xmx64m, topology.spout.wait.strategy=org.apache.storm.spout.SleepSpoutWaitStrategy, ui.host=0.0.0.0, storm.nimbus.retry.interval.millis=2000, nimbus.inbox.jar.expiration.secs=3600, dev.zookeeper.path=/tmp/dev-storm-zookeeper, topology.acker.executors=null, topology.fall.back.on.java.serialization=true, topology.eventlogger.executors=0, supervisor.localizer.cleanup.interval.ms=600000, storm.zookeeper.servers=[localhost], nimbus.thrift.threads=64, logviewer.cleanup.age.mins=10080, topology.worker.childopts=null, topology.classpath=null, supervisor.monitor.frequency.secs=3, nimbus.credential.renewers.freq.secs=600, topology.skip.missing.kryo.registrations=true, drpc.authorizer.acl.filename=drpc-auth-acl.yaml, pacemaker.kerberos.users=[], storm.group.mapping.service.cache.duration.secs=120, blobstore.dir=C:\Users\ADMINI~1\AppData\Local\Temp\e3af5b33-c772-4823-b9b7-7ec3071b6530, topology.testing.always.try.serialize=false, nimbus.monitor.freq.secs=10, storm.health.check.timeout.ms=5000, supervisor.supervisors=[], topology.tasks=null, topology.bolts.outgoing.overflow.buffer.enable=false, storm.messaging.netty.socket.backlog=500, topology.workers=1, pacemaker.base.threads=10, storm.local.dir=C:\Users\ADMINI~1\AppData\Local\Temp\b0409fdf-8c65-48a9-923a-9a51641b7fa6, worker.childopts=-Xmx%HEAP-MEM%m -XX:+PrintGCDetails -Xloggc:artifacts/gc.log -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=1M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=artifacts/heapdump, storm.auth.simple-white-list.users=[], topology.disruptor.batch.timeout.millis=1, topology.message.timeout.secs=30, topology.state.synchronization.timeout.secs=60, topology.tuple.serializer=org.apache.storm.serialization.types.ListDelegateSerializer, supervisor.supervisors.commands=[], nimbus.blobstore.expiration.secs=600, logviewer.childopts=-Xmx128m, topology.environment=null, topology.debug=false, topology.disruptor.batch.size=100, storm.disable.symlinks=false, storm.messaging.netty.max_retries=300, ui.childopts=-Xmx768m, storm.network.topography.plugin=org.apache.storm.networktopography.DefaultRackDNSToSwitchMapping, storm.zookeeper.session.timeout=20000, drpc.childopts=-Xmx768m, drpc.http.creds.plugin=org.apache.storm.security.auth.DefaultHttpCredentialsPlugin, storm.zookeeper.connection.timeout=15000, storm.zookeeper.auth.user=null, storm.meta.serialization.delegate=org.apache.storm.serialization.GzipThriftSerializationDelegate, topology.max.spout.pending=null, storm.codedistributor.class=org.apache.storm.codedistributor.LocalFileSystemCodeDistributor, nimbus.supervisor.timeout.secs=60, nimbus.task.timeout.secs=30, drpc.port=3772, pacemaker.max.threads=50, storm.zookeeper.retry.intervalceiling.millis=30000, nimbus.thrift.port=6627, storm.auth.simple-acl.admins=[], topology.component.cpu.pcore.percent=10.0, supervisor.memory.capacity.mb=3072.0, storm.nimbus.retry.times=5, supervisor.worker.start.timeout.secs=120, storm.zookeeper.retry.interval=1000, logs.users=null, storm.cluster.metrics.consumer.publish.interval.secs=60, worker.profiler.command=flight.bash, transactional.zookeeper.port=null, drpc.max_buffer_size=1048576, pacemaker.thread.timeout=10, task.credentials.poll.secs=30, blobstore.superuser=Administrator, drpc.https.keystore.type=JKS, topology.worker.receiver.thread.count=1, topology.state.checkpoint.interval.ms=1000, supervisor.slots.ports=[1024, 1025, 1026], topology.transfer.buffer.size=1024, storm.health.check.dir=healthchecks, topology.worker.shared.thread.pool.size=4, drpc.authorizer.acl.strict=false, nimbus.file.copy.expiration.secs=600, worker.profiler.childopts=-XX:+UnlockCommercialFeatures -XX:+FlightRecorder, topology.executor.receive.buffer.size=1024, backpressure.disruptor.low.watermark=0.4, nimbus.task.launch.secs=120, storm.local.mode.zmq=false, storm.messaging.netty.buffer_size=5242880, storm.cluster.state.store=org.apache.storm.cluster_state.zookeeper_state_factory, worker.heartbeat.frequency.secs=1, storm.log4j2.conf.dir=log4j2, ui.http.creds.plugin=org.apache.storm.security.auth.DefaultHttpCredentialsPlugin, storm.zookeeper.root=/storm, topology.tick.tuple.freq.secs=null, drpc.https.port=-1, storm.workers.artifacts.dir=workers-artifacts, supervisor.blobstore.download.max_retries=3, task.refresh.poll.secs=10, storm.exhibitor.port=8080, task.heartbeat.frequency.secs=3, pacemaker.port=6699, storm.messaging.netty.max_wait_ms=1000, topology.component.resources.offheap.memory.mb=0.0, drpc.http.port=3774, topology.error.throttle.interval.secs=10, storm.messaging.transport=org.apache.storm.messaging.netty.Context, topology.disable.loadaware.messaging=false, storm.messaging.netty.authentication=false, topology.component.resources.onheap.memory.mb=128.0, topology.kryo.factory=org.apache.storm.serialization.DefaultKryoFactory, worker.gc.childopts=, nimbus.topology.validator=org.apache.storm.nimbus.DefaultTopologyValidator, nimbus.seeds=[localhost], nimbus.queue.size=100000, nimbus.cleanup.inbox.freq.secs=600, storm.blobstore.replication.factor=3, worker.heap.memory.mb=768, logviewer.max.sum.worker.logs.size.mb=4096, pacemaker.childopts=-Xmx1024m, ui.users=null, transactional.zookeeper.servers=null, supervisor.worker.timeout.secs=30, storm.zookeeper.auth.password=null, storm.blobstore.acl.validation.enabled=false, client.blobstore.class=org.apache.storm.blobstore.NimbusBlobStore, storm.thrift.socket.timeout.ms=600000, supervisor.childopts=-Xmx256m, topology.worker.max.heap.size.mb=768.0, ui.http.x-frame-options=DENY, backpressure.disruptor.high.watermark=0.9, ui.filter=null, ui.header.buffer.bytes=4096, topology.min.replication.count=1, topology.disruptor.wait.timeout.millis=1000, storm.nimbus.retry.intervalceiling.millis=60000, topology.trident.batch.emit.interval.millis=50, storm.auth.simple-acl.users=[], drpc.invocations.threads=64, java.library.path=/usr/local/lib:/opt/local/lib:/usr/lib, ui.port=8080, storm.exhibitor.poll.uripath=/exhibitor/v1/cluster/list, storm.messaging.netty.transfer.batch.size=262144, logviewer.appender.name=A1, nimbus.thrift.max_buffer_size=1048576, storm.auth.simple-acl.users.commands=[], drpc.request.timeout.secs=600}
+3325 [main] WARN  o.a.s.d.s.Slot - SLOT snail-z97:1024 Starting in state EMPTY - assignment null
+3325 [main] WARN  o.a.s.d.s.Slot - SLOT snail-z97:1025 Starting in state EMPTY - assignment null
+3325 [main] WARN  o.a.s.d.s.Slot - SLOT snail-z97:1026 Starting in state EMPTY - assignment null
+3326 [main] INFO  o.a.s.l.AsyncLocalizer - Cleaning up unused topologies in C:\Users\ADMINI~1\AppData\Local\Temp\b0409fdf-8c65-48a9-923a-9a51641b7fa6\supervisor\stormdist
+3328 [main] INFO  o.a.s.d.s.Supervisor - Starting supervisor with id 0e1d4daa-8d93-4baa-b700-aa6f1a757885 at host snail-z97.
+3331 [main] INFO  o.a.s.z.Zookeeper - Staring ZK Curator
+3331 [main] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+3332 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000 sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@12404f9d
+3333 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+3333 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+3333 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3231
+3334 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3231
+3337 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d5000b with negotiated timeout 20000 for client /127.0.0.1:3231
+3337 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d5000b, negotiated timeout = 20000
+3337 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3338 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+3338 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d5000b
+3345 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+3345 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d5000b closed
+3345 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3231 which had sessionid 0x160c031f0d5000b
+3345 [main] INFO  o.a.s.z.Zookeeper - Staring ZK Curator
+3345 [main] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+3346 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@25b20860
+3346 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+3347 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+3347 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3234
+3347 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3234
+3353 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d5000c with negotiated timeout 20000 for client /127.0.0.1:3234
+3354 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d5000c, negotiated timeout = 20000
+3354 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3360 [main] INFO  o.a.s.l.Localizer - Reconstruct localized resource: C:\Users\ADMINI~1\AppData\Local\Temp\790dfae2-6b04-43f9-9aef-e8c9da3e2560\supervisor\usercache
+3361 [main] WARN  o.a.s.l.Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\790dfae2-6b04-43f9-9aef-e8c9da3e2560\supervisor\usercache
+3361 [main] INFO  o.a.s.d.s.Supervisor - Starting Supervisor with conf {topology.builtin.metrics.bucket.size.secs=60, nimbus.childopts=-Xmx1024m, ui.filter.params=null, storm.cluster.mode=local, storm.messaging.netty.client_worker_threads=1, logviewer.max.per.worker.logs.size.mb=2048, supervisor.run.worker.as.user=false, topology.max.task.parallelism=null, topology.priority=29, zmq.threads=1, storm.group.mapping.service=org.apache.storm.security.auth.ShellBasedGroupsMapping, transactional.zookeeper.root=/transactional, topology.sleep.spout.wait.strategy.time.ms=1, scheduler.display.resource=false, topology.max.replication.wait.time.sec=60, drpc.invocations.port=3773, supervisor.localizer.cache.target.size.mb=10240, topology.multilang.serializer=org.apache.storm.multilang.JsonSerializer, storm.messaging.netty.server_worker_threads=1, nimbus.blobstore.class=org.apache.storm.blobstore.LocalFsBlobStore, resource.aware.scheduler.eviction.strategy=org.apache.storm.scheduler.resource.strategies.eviction.DefaultEvictionStrategy, topology.max.error.report.per.interval=5, storm.thrift.transport=org.apache.storm.security.auth.SimpleTransportPlugin, zmq.hwm=0, storm.group.mapping.service.params=null, worker.profiler.enabled=false, storm.principal.tolocal=org.apache.storm.security.auth.DefaultPrincipalToLocal, supervisor.worker.shutdown.sleep.secs=3, pacemaker.host=localhost, storm.zookeeper.retry.times=5, ui.actions.enabled=true, zmq.linger.millis=0, supervisor.enable=true, topology.stats.sample.rate=0.05, storm.messaging.netty.min_wait_ms=100, worker.log.level.reset.poll.secs=30, storm.zookeeper.port=2000, supervisor.heartbeat.frequency.secs=5, topology.enable.message.timeouts=true, supervisor.cpu.capacity=400.0, drpc.worker.threads=64, supervisor.blobstore.download.thread.count=5, task.backpressure.poll.secs=30, drpc.queue.size=128, topology.backpressure.enable=false, supervisor.blobstore.class=org.apache.storm.blobstore.NimbusBlobStore, storm.blobstore.inputstream.buffer.size.bytes=65536, topology.shellbolt.max.pending=100, drpc.https.keystore.password=, nimbus.code.sync.freq.secs=120, logviewer.port=8000, topology.scheduler.strategy=org.apache.storm.scheduler.resource.strategies.scheduling.DefaultResourceAwareStrategy, topology.executor.send.buffer.size=1024, resource.aware.scheduler.priority.strategy=org.apache.storm.scheduler.resource.strategies.priority.DefaultSchedulingPriorityStrategy, pacemaker.auth.method=NONE, storm.daemon.metrics.reporter.plugins=[org.apache.storm.daemon.metrics.reporters.JmxPreparableReporter], topology.worker.logwriter.childopts=-Xmx64m, topology.spout.wait.strategy=org.apache.storm.spout.SleepSpoutWaitStrategy, ui.host=0.0.0.0, storm.nimbus.retry.interval.millis=2000, nimbus.inbox.jar.expiration.secs=3600, dev.zookeeper.path=/tmp/dev-storm-zookeeper, topology.acker.executors=null, topology.fall.back.on.java.serialization=true, topology.eventlogger.executors=0, supervisor.localizer.cleanup.interval.ms=600000, storm.zookeeper.servers=[localhost], nimbus.thrift.threads=64, logviewer.cleanup.age.mins=10080, topology.worker.childopts=null, topology.classpath=null, supervisor.monitor.frequency.secs=3, nimbus.credential.renewers.freq.secs=600, topology.skip.missing.kryo.registrations=true, drpc.authorizer.acl.filename=drpc-auth-acl.yaml, pacemaker.kerberos.users=[], storm.group.mapping.service.cache.duration.secs=120, blobstore.dir=C:\Users\ADMINI~1\AppData\Local\Temp\e3af5b33-c772-4823-b9b7-7ec3071b6530, topology.testing.always.try.serialize=false, nimbus.monitor.freq.secs=10, storm.health.check.timeout.ms=5000, supervisor.supervisors=[], topology.tasks=null, topology.bolts.outgoing.overflow.buffer.enable=false, storm.messaging.netty.socket.backlog=500, topology.workers=1, pacemaker.base.threads=10, storm.local.dir=C:\Users\ADMINI~1\AppData\Local\Temp\790dfae2-6b04-43f9-9aef-e8c9da3e2560, worker.childopts=-Xmx%HEAP-MEM%m -XX:+PrintGCDetails -Xloggc:artifacts/gc.log -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=1M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=artifacts/heapdump, storm.auth.simple-white-list.users=[], topology.disruptor.batch.timeout.millis=1, topology.message.timeout.secs=30, topology.state.synchronization.timeout.secs=60, topology.tuple.serializer=org.apache.storm.serialization.types.ListDelegateSerializer, supervisor.supervisors.commands=[], nimbus.blobstore.expiration.secs=600, logviewer.childopts=-Xmx128m, topology.environment=null, topology.debug=false, topology.disruptor.batch.size=100, storm.disable.symlinks=false, storm.messaging.netty.max_retries=300, ui.childopts=-Xmx768m, storm.network.topography.plugin=org.apache.storm.networktopography.DefaultRackDNSToSwitchMapping, storm.zookeeper.session.timeout=20000, drpc.childopts=-Xmx768m, drpc.http.creds.plugin=org.apache.storm.security.auth.DefaultHttpCredentialsPlugin, storm.zookeeper.connection.timeout=15000, storm.zookeeper.auth.user=null, storm.meta.serialization.delegate=org.apache.storm.serialization.GzipThriftSerializationDelegate, topology.max.spout.pending=null, storm.codedistributor.class=org.apache.storm.codedistributor.LocalFileSystemCodeDistributor, nimbus.supervisor.timeout.secs=60, nimbus.task.timeout.secs=30, drpc.port=3772, pacemaker.max.threads=50, storm.zookeeper.retry.intervalceiling.millis=30000, nimbus.thrift.port=6627, storm.auth.simple-acl.admins=[], topology.component.cpu.pcore.percent=10.0, supervisor.memory.capacity.mb=3072.0, storm.nimbus.retry.times=5, supervisor.worker.start.timeout.secs=120, storm.zookeeper.retry.interval=1000, logs.users=null, storm.cluster.metrics.consumer.publish.interval.secs=60, worker.profiler.command=flight.bash, transactional.zookeeper.port=null, drpc.max_buffer_size=1048576, pacemaker.thread.timeout=10, task.credentials.poll.secs=30, blobstore.superuser=Administrator, drpc.https.keystore.type=JKS, topology.worker.receiver.thread.count=1, topology.state.checkpoint.interval.ms=1000, supervisor.slots.ports=[1027, 1028, 1029], topology.transfer.buffer.size=1024, storm.health.check.dir=healthchecks, topology.worker.shared.thread.pool.size=4, drpc.authorizer.acl.strict=false, nimbus.file.copy.expiration.secs=600, worker.profiler.childopts=-XX:+UnlockCommercialFeatures -XX:+FlightRecorder, topology.executor.receive.buffer.size=1024, backpressure.disruptor.low.watermark=0.4, nimbus.task.launch.secs=120, storm.local.mode.zmq=false, storm.messaging.netty.buffer_size=5242880, storm.cluster.state.store=org.apache.storm.cluster_state.zookeeper_state_factory, worker.heartbeat.frequency.secs=1, storm.log4j2.conf.dir=log4j2, ui.http.creds.plugin=org.apache.storm.security.auth.DefaultHttpCredentialsPlugin, storm.zookeeper.root=/storm, topology.tick.tuple.freq.secs=null, drpc.https.port=-1, storm.workers.artifacts.dir=workers-artifacts, supervisor.blobstore.download.max_retries=3, task.refresh.poll.secs=10, storm.exhibitor.port=8080, task.heartbeat.frequency.secs=3, pacemaker.port=6699, storm.messaging.netty.max_wait_ms=1000, topology.component.resources.offheap.memory.mb=0.0, drpc.http.port=3774, topology.error.throttle.interval.secs=10, storm.messaging.transport=org.apache.storm.messaging.netty.Context, topology.disable.loadaware.messaging=false, storm.messaging.netty.authentication=false, topology.component.resources.onheap.memory.mb=128.0, topology.kryo.factory=org.apache.storm.serialization.DefaultKryoFactory, worker.gc.childopts=, nimbus.topology.validator=org.apache.storm.nimbus.DefaultTopologyValidator, nimbus.seeds=[localhost], nimbus.queue.size=100000, nimbus.cleanup.inbox.freq.secs=600, storm.blobstore.replication.factor=3, worker.heap.memory.mb=768, logviewer.max.sum.worker.logs.size.mb=4096, pacemaker.childopts=-Xmx1024m, ui.users=null, transactional.zookeeper.servers=null, supervisor.worker.timeout.secs=30, storm.zookeeper.auth.password=null, storm.blobstore.acl.validation.enabled=false, client.blobstore.class=org.apache.storm.blobstore.NimbusBlobStore, storm.thrift.socket.timeout.ms=600000, supervisor.childopts=-Xmx256m, topology.worker.max.heap.size.mb=768.0, ui.http.x-frame-options=DENY, backpressure.disruptor.high.watermark=0.9, ui.filter=null, ui.header.buffer.bytes=4096, topology.min.replication.count=1, topology.disruptor.wait.timeout.millis=1000, storm.nimbus.retry.intervalceiling.millis=60000, topology.trident.batch.emit.interval.millis=50, storm.auth.simple-acl.users=[], drpc.invocations.threads=64, java.library.path=/usr/local/lib:/opt/local/lib:/usr/lib, ui.port=8080, storm.exhibitor.poll.uripath=/exhibitor/v1/cluster/list, storm.messaging.netty.transfer.batch.size=262144, logviewer.appender.name=A1, nimbus.thrift.max_buffer_size=1048576, storm.auth.simple-acl.users.commands=[], drpc.request.timeout.secs=600}
+3368 [main] WARN  o.a.s.d.s.Slot - SLOT snail-z97:1027 Starting in state EMPTY - assignment null
+3368 [main] WARN  o.a.s.d.s.Slot - SLOT snail-z97:1028 Starting in state EMPTY - assignment null
+3368 [main] WARN  o.a.s.d.s.Slot - SLOT snail-z97:1029 Starting in state EMPTY - assignment null
+3368 [main] INFO  o.a.s.l.AsyncLocalizer - Cleaning up unused topologies in C:\Users\ADMINI~1\AppData\Local\Temp\790dfae2-6b04-43f9-9aef-e8c9da3e2560\supervisor\stormdist
+3369 [main] INFO  o.a.s.d.s.Supervisor - Starting supervisor with id 94a29351-75af-4c90-a823-940455537586 at host snail-z97.
+3373 [main] WARN  o.a.s.u.Utils - STORM-VERSION new 1.1.1 old 1.1.1
+3408 [main] INFO  o.a.s.d.nimbus - Received topology submission for wordcount (storm-1.1.1 JDK-1.8.0_91) with conf {"topology.max.task.parallelism" nil, "topology.submitter.principal" "", "topology.acker.executors" nil, "topology.eventlogger.executors" 0, "storm.zookeeper.superACL" nil, "topology.users" (), "topology.submitter.user" "Administrator", "file" "word", "topology.kryo.register" nil, "topology.kryo.decorators" (), "storm.id" "wordcount-1-1515052987", "topology.name" "wordcount"}
+3424 [main] INFO  o.a.s.d.nimbus - uploadedJar 
+3433 [main] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+3433 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@7535f28
+3443 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+3443 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+3443 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3237
+3444 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3237
+3449 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d5000d with negotiated timeout 20000 for client /127.0.0.1:3237
+3449 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d5000d, negotiated timeout = 20000
+3449 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3450 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x160c031f0d5000d type:create cxid:0x2 zxid:0x26 txntype:-1 reqpath:n/a Error Path:/storm/blobstoremaxkeysequencenumber Error:KeeperErrorCode = NoNode for /storm/blobstoremaxkeysequencenumber
+3476 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+3477 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d5000d
+3481 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+3481 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d5000d closed
+3481 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3237 which had sessionid 0x160c031f0d5000d
+3482 [main] INFO  o.a.s.cluster - setup-path/blobstore/wordcount-1-1515052987-stormconf.ser/snail-z97:6627-1
+3504 [main] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+3504 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@595184d8
+3505 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+3506 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+3506 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3240
+3506 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3240
+3511 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d5000e with negotiated timeout 20000 for client /127.0.0.1:3240
+3512 [main-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d5000e, negotiated timeout = 20000
+3512 [main-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+3522 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+3523 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d5000e
+3529 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+3529 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d5000e closed
+3529 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3240 which had sessionid 0x160c031f0d5000e
+3529 [main] INFO  o.a.s.cluster - setup-path/blobstore/wordcount-1-1515052987-stormcode.ser/snail-z97:6627-1
+3547 [main] INFO  o.a.s.d.nimbus - desired replication count 1 achieved, current-replication-count for conf key = 1, current-replication-count for code key = 1, current-replication-count for jar key = 1
+3584 [main] INFO  o.a.s.d.nimbus - Activating wordcount: wordcount-1-1515052987
+4155 [timer] INFO  o.a.s.s.EvenScheduler - Available slots: (["94a29351-75af-4c90-a823-940455537586" 1027] ["94a29351-75af-4c90-a823-940455537586" 1028] ["94a29351-75af-4c90-a823-940455537586" 1029] ["0e1d4daa-8d93-4baa-b700-aa6f1a757885" 1024] ["0e1d4daa-8d93-4baa-b700-aa6f1a757885" 1025] ["0e1d4daa-8d93-4baa-b700-aa6f1a757885" 1026])
+4172 [timer] INFO  o.a.s.d.nimbus - Setting new assignment for topology id wordcount-1-1515052987: #org.apache.storm.daemon.common.Assignment{:master-code-dir "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\e3af5b33-c772-4823-b9b7-7ec3071b6530", :node->host {"94a29351-75af-4c90-a823-940455537586" "snail-z97"}, :executor->node+port {[4 4] ["94a29351-75af-4c90-a823-940455537586" 1027], [3 3] ["94a29351-75af-4c90-a823-940455537586" 1027], [2 2] ["94a29351-75af-4c90-a823-940455537586" 1027], [1 1] ["94a29351-75af-4c90-a823-940455537586" 1027]}, :executor->start-time-secs {[1 1] 1515052987, [2 2] 1515052987, [3 3] 1515052987, [4 4] 1515052987}, :worker->resources {["94a29351-75af-4c90-a823-940455537586" 1027] [0.0 0.0 0.0]}, :owner "Administrator"}
+5378 [SLOT_1027] INFO  o.a.s.d.s.Slot - STATE EMPTY msInState: 2010 -> WAITING_FOR_BASIC_LOCALIZATION msInState: 1
+5380 [Async Localizer] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+5381 [Async Localizer] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@1ff9173
+5385 [Async Localizer] INFO  o.a.s.b.FileBlobStoreImpl - Creating new blob store based in C:\Users\ADMINI~1\AppData\Local\Temp\e3af5b33-c772-4823-b9b7-7ec3071b6530\blobs
+5387 [Async Localizer-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+5390 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3247
+5396 [Async Localizer-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+5400 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3247
+5408 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d5000f with negotiated timeout 20000 for client /127.0.0.1:3247
+5409 [Async Localizer-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d5000f, negotiated timeout = 20000
+5409 [Async Localizer-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+5423 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+5424 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d5000f
+5431 [Async Localizer] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d5000f closed
+5431 [Async Localizer-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+5432 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3247 which had sessionid 0x160c031f0d5000f
+5493 [SLOT_1027] INFO  o.a.s.d.s.Slot - STATE WAITING_FOR_BASIC_LOCALIZATION msInState: 115 -> WAITING_FOR_BLOB_LOCALIZATION msInState: 0
+5498 [SLOT_1027] INFO  o.a.s.d.s.Container - Setting up 94a29351-75af-4c90-a823-940455537586:b05f1776-4038-4316-928e-879ee6f19efd
+5512 [SLOT_1027] INFO  o.a.s.d.s.Container - GET worker-user for b05f1776-4038-4316-928e-879ee6f19efd
+5532 [SLOT_1027] INFO  o.a.s.d.s.Container - SET worker-user b05f1776-4038-4316-928e-879ee6f19efd Administrator
+5540 [SLOT_1027] INFO  o.a.s.d.worker - Launching worker for wordcount-1-1515052987 on 94a29351-75af-4c90-a823-940455537586:1027 with id b05f1776-4038-4316-928e-879ee6f19efd and conf {"topology.builtin.metrics.bucket.size.secs" 60, "nimbus.childopts" "-Xmx1024m", "ui.filter.params" nil, "storm.cluster.mode" "local", "storm.messaging.netty.client_worker_threads" 1, "logviewer.max.per.worker.logs.size.mb" 2048, "supervisor.run.worker.as.user" false, "topology.max.task.parallelism" nil, "topology.priority" 29, "zmq.threads" 1, "storm.group.mapping.service" "org.apache.storm.security.auth.ShellBasedGroupsMapping", "transactional.zookeeper.root" "/transactional", "topology.sleep.spout.wait.strategy.time.ms" 1, "scheduler.display.resource" false, "topology.max.replication.wait.time.sec" 60, "drpc.invocations.port" 3773, "supervisor.localizer.cache.target.size.mb" 10240, "topology.multilang.serializer" "org.apache.storm.multilang.JsonSerializer", "storm.messaging.netty.server_worker_threads" 1, "nimbus.blobstore.class" "org.apache.storm.blobstore.LocalFsBlobStore", "resource.aware.scheduler.eviction.strategy" "org.apache.storm.scheduler.resource.strategies.eviction.DefaultEvictionStrategy", "topology.max.error.report.per.interval" 5, "storm.thrift.transport" "org.apache.storm.security.auth.SimpleTransportPlugin", "zmq.hwm" 0, "storm.group.mapping.service.params" nil, "worker.profiler.enabled" false, "storm.principal.tolocal" "org.apache.storm.security.auth.DefaultPrincipalToLocal", "supervisor.worker.shutdown.sleep.secs" 3, "pacemaker.host" "localhost", "storm.zookeeper.retry.times" 5, "ui.actions.enabled" true, "zmq.linger.millis" 0, "supervisor.enable" true, "topology.stats.sample.rate" 0.05, "storm.messaging.netty.min_wait_ms" 100, "worker.log.level.reset.poll.secs" 30, "storm.zookeeper.port" 2000, "supervisor.heartbeat.frequency.secs" 5, "topology.enable.message.timeouts" true, "supervisor.cpu.capacity" 400.0, "drpc.worker.threads" 64, "supervisor.blobstore.download.thread.count" 5, "task.backpressure.poll.secs" 30, "drpc.queue.size" 128, "topology.backpressure.enable" false, "supervisor.blobstore.class" "org.apache.storm.blobstore.NimbusBlobStore", "storm.blobstore.inputstream.buffer.size.bytes" 65536, "topology.shellbolt.max.pending" 100, "drpc.https.keystore.password" "", "nimbus.code.sync.freq.secs" 120, "logviewer.port" 8000, "topology.scheduler.strategy" "org.apache.storm.scheduler.resource.strategies.scheduling.DefaultResourceAwareStrategy", "topology.executor.send.buffer.size" 1024, "resource.aware.scheduler.priority.strategy" "org.apache.storm.scheduler.resource.strategies.priority.DefaultSchedulingPriorityStrategy", "pacemaker.auth.method" "NONE", "storm.daemon.metrics.reporter.plugins" ["org.apache.storm.daemon.metrics.reporters.JmxPreparableReporter"], "topology.worker.logwriter.childopts" "-Xmx64m", "topology.spout.wait.strategy" "org.apache.storm.spout.SleepSpoutWaitStrategy", "ui.host" "0.0.0.0", "storm.nimbus.retry.interval.millis" 2000, "nimbus.inbox.jar.expiration.secs" 3600, "dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.acker.executors" nil, "topology.fall.back.on.java.serialization" true, "topology.eventlogger.executors" 0, "supervisor.localizer.cleanup.interval.ms" 600000, "storm.zookeeper.servers" ["localhost"], "nimbus.thrift.threads" 64, "logviewer.cleanup.age.mins" 10080, "topology.worker.childopts" nil, "topology.classpath" nil, "supervisor.monitor.frequency.secs" 3, "nimbus.credential.renewers.freq.secs" 600, "topology.skip.missing.kryo.registrations" true, "drpc.authorizer.acl.filename" "drpc-auth-acl.yaml", "pacemaker.kerberos.users" [], "storm.group.mapping.service.cache.duration.secs" 120, "blobstore.dir" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\e3af5b33-c772-4823-b9b7-7ec3071b6530", "topology.testing.always.try.serialize" false, "nimbus.monitor.freq.secs" 10, "storm.health.check.timeout.ms" 5000, "supervisor.supervisors" [], "topology.tasks" nil, "topology.bolts.outgoing.overflow.buffer.enable" false, "storm.messaging.netty.socket.backlog" 500, "topology.workers" 1, "pacemaker.base.threads" 10, "storm.local.dir" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\790dfae2-6b04-43f9-9aef-e8c9da3e2560", "worker.childopts" "-Xmx%HEAP-MEM%m -XX:+PrintGCDetails -Xloggc:artifacts/gc.log -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=1M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=artifacts/heapdump", "storm.auth.simple-white-list.users" [], "topology.disruptor.batch.timeout.millis" 1, "topology.message.timeout.secs" 30, "topology.state.synchronization.timeout.secs" 60, "topology.tuple.serializer" "org.apache.storm.serialization.types.ListDelegateSerializer", "supervisor.supervisors.commands" [], "nimbus.blobstore.expiration.secs" 600, "logviewer.childopts" "-Xmx128m", "topology.environment" nil, "topology.debug" false, "topology.disruptor.batch.size" 100, "storm.disable.symlinks" false, "storm.messaging.netty.max_retries" 300, "ui.childopts" "-Xmx768m", "storm.network.topography.plugin" "org.apache.storm.networktopography.DefaultRackDNSToSwitchMapping", "storm.zookeeper.session.timeout" 20000, "drpc.childopts" "-Xmx768m", "drpc.http.creds.plugin" "org.apache.storm.security.auth.DefaultHttpCredentialsPlugin", "storm.zookeeper.connection.timeout" 15000, "storm.zookeeper.auth.user" nil, "storm.meta.serialization.delegate" "org.apache.storm.serialization.GzipThriftSerializationDelegate", "topology.max.spout.pending" nil, "storm.codedistributor.class" "org.apache.storm.codedistributor.LocalFileSystemCodeDistributor", "nimbus.supervisor.timeout.secs" 60, "nimbus.task.timeout.secs" 30, "drpc.port" 3772, "pacemaker.max.threads" 50, "storm.zookeeper.retry.intervalceiling.millis" 30000, "nimbus.thrift.port" 6627, "storm.auth.simple-acl.admins" [], "topology.component.cpu.pcore.percent" 10.0, "supervisor.memory.capacity.mb" 3072.0, "storm.nimbus.retry.times" 5, "supervisor.worker.start.timeout.secs" 120, "storm.zookeeper.retry.interval" 1000, "logs.users" nil, "storm.cluster.metrics.consumer.publish.interval.secs" 60, "worker.profiler.command" "flight.bash", "transactional.zookeeper.port" nil, "drpc.max_buffer_size" 1048576, "pacemaker.thread.timeout" 10, "task.credentials.poll.secs" 30, "blobstore.superuser" "Administrator", "drpc.https.keystore.type" "JKS", "topology.worker.receiver.thread.count" 1, "topology.state.checkpoint.interval.ms" 1000, "supervisor.slots.ports" (1027 1028 1029), "topology.transfer.buffer.size" 1024, "storm.health.check.dir" "healthchecks", "topology.worker.shared.thread.pool.size" 4, "drpc.authorizer.acl.strict" false, "nimbus.file.copy.expiration.secs" 600, "worker.profiler.childopts" "-XX:+UnlockCommercialFeatures -XX:+FlightRecorder", "topology.executor.receive.buffer.size" 1024, "backpressure.disruptor.low.watermark" 0.4, "nimbus.task.launch.secs" 120, "storm.local.mode.zmq" false, "storm.messaging.netty.buffer_size" 5242880, "storm.cluster.state.store" "org.apache.storm.cluster_state.zookeeper_state_factory", "worker.heartbeat.frequency.secs" 1, "storm.log4j2.conf.dir" "log4j2", "ui.http.creds.plugin" "org.apache.storm.security.auth.DefaultHttpCredentialsPlugin", "storm.zookeeper.root" "/storm", "topology.tick.tuple.freq.secs" nil, "drpc.https.port" -1, "storm.workers.artifacts.dir" "workers-artifacts", "supervisor.blobstore.download.max_retries" 3, "task.refresh.poll.secs" 10, "storm.exhibitor.port" 8080, "task.heartbeat.frequency.secs" 3, "pacemaker.port" 6699, "storm.messaging.netty.max_wait_ms" 1000, "topology.component.resources.offheap.memory.mb" 0.0, "drpc.http.port" 3774, "topology.error.throttle.interval.secs" 10, "storm.messaging.transport" "org.apache.storm.messaging.netty.Context", "topology.disable.loadaware.messaging" false, "storm.messaging.netty.authentication" false, "topology.component.resources.onheap.memory.mb" 128.0, "topology.kryo.factory" "org.apache.storm.serialization.DefaultKryoFactory", "worker.gc.childopts" "", "nimbus.topology.validator" "org.apache.storm.nimbus.DefaultTopologyValidator", "nimbus.seeds" ["localhost"], "nimbus.queue.size" 100000, "nimbus.cleanup.inbox.freq.secs" 600, "storm.blobstore.replication.factor" 3, "worker.heap.memory.mb" 768, "logviewer.max.sum.worker.logs.size.mb" 4096, "pacemaker.childopts" "-Xmx1024m", "ui.users" nil, "transactional.zookeeper.servers" nil, "supervisor.worker.timeout.secs" 30, "storm.zookeeper.auth.password" nil, "storm.blobstore.acl.validation.enabled" false, "client.blobstore.class" "org.apache.storm.blobstore.NimbusBlobStore", "storm.thrift.socket.timeout.ms" 600000, "supervisor.childopts" "-Xmx256m", "topology.worker.max.heap.size.mb" 768.0, "ui.http.x-frame-options" "DENY", "backpressure.disruptor.high.watermark" 0.9, "ui.filter" nil, "ui.header.buffer.bytes" 4096, "topology.min.replication.count" 1, "topology.disruptor.wait.timeout.millis" 1000, "storm.nimbus.retry.intervalceiling.millis" 60000, "topology.trident.batch.emit.interval.millis" 50, "storm.auth.simple-acl.users" [], "drpc.invocations.threads" 64, "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "ui.port" 8080, "storm.exhibitor.poll.uripath" "/exhibitor/v1/cluster/list", "storm.messaging.netty.transfer.batch.size" 262144, "logviewer.appender.name" "A1", "nimbus.thrift.max_buffer_size" 1048576, "storm.auth.simple-acl.users.commands" [], "drpc.request.timeout.secs" 600}
+5543 [SLOT_1027] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+5543 [SLOT_1027] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000 sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@796dd1ff
+5545 [SLOT_1027-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+5545 [SLOT_1027-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+5545 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3250
+5546 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3250
+5549 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d50010 with negotiated timeout 20000 for client /127.0.0.1:3250
+5550 [SLOT_1027-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d50010, negotiated timeout = 20000
+5550 [SLOT_1027-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+5550 [SLOT_1027-EventThread] INFO  o.a.s.zookeeper - Zookeeper state update: :connected:none
+5551 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+5552 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d50010
+5556 [SLOT_1027-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+5556 [SLOT_1027] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d50010 closed
+5556 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3250 which had sessionid 0x160c031f0d50010
+5557 [SLOT_1027] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - Starting
+5557 [SLOT_1027] INFO  o.a.s.s.o.a.z.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@1897b7e
+5559 [SLOT_1027-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+5559 [SLOT_1027-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2000, initiating session
+5560 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:3253
+5560 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:3253
+5566 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - Established session 0x160c031f0d50011 with negotiated timeout 20000 for client /127.0.0.1:3253
+5567 [SLOT_1027-SendThread(127.0.0.1:2000)] INFO  o.a.s.s.o.a.z.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2000, sessionid = 0x160c031f0d50011, negotiated timeout = 20000
+5567 [SLOT_1027-EventThread] INFO  o.a.s.s.o.a.c.f.s.ConnectionStateManager - State change: CONNECTED
+5574 [SLOT_1027] INFO  o.a.s.s.a.AuthUtils - Got AutoCreds []
+5576 [SLOT_1027] INFO  o.a.s.d.worker - Reading Assignments.
+5615 [SLOT_1027] INFO  o.a.s.d.worker - Registering IConnectionCallbacks for 94a29351-75af-4c90-a823-940455537586:1027
+5646 [SLOT_1027] INFO  o.a.s.d.executor - Loading executor WordNormalizerBolt:[2 2]
+5654 [SLOT_1027] INFO  o.a.s.d.executor - Loaded executor tasks WordNormalizerBolt:[2 2]
+5754 [SLOT_1027] INFO  o.a.s.d.executor - Finished loading executor WordNormalizerBolt:[2 2]
+5766 [SLOT_1027] INFO  o.a.s.d.executor - Loading executor WordReadSpout:[3 3]
+5768 [SLOT_1027] INFO  o.a.s.d.executor - Loaded executor tasks WordReadSpout:[3 3]
+5772 [SLOT_1027] INFO  o.a.s.d.executor - Finished loading executor WordReadSpout:[3 3]
+5781 [SLOT_1027] INFO  o.a.s.d.executor - Loading executor WordCountBolt:[1 1]
+5782 [SLOT_1027] INFO  o.a.s.d.executor - Loaded executor tasks WordCountBolt:[1 1]
+5784 [SLOT_1027] INFO  o.a.s.d.executor - Finished loading executor WordCountBolt:[1 1]
+5793 [SLOT_1027] INFO  o.a.s.d.executor - Loading executor __system:[-1 -1]
+5793 [SLOT_1027] INFO  o.a.s.d.executor - Loaded executor tasks __system:[-1 -1]
+5794 [SLOT_1027] INFO  o.a.s.d.executor - Finished loading executor __system:[-1 -1]
+5800 [SLOT_1027] INFO  o.a.s.d.executor - Loading executor __acker:[4 4]
+5800 [SLOT_1027] INFO  o.a.s.d.executor - Loaded executor tasks __acker:[4 4]
+5802 [SLOT_1027] INFO  o.a.s.d.executor - Timeouts disabled for executor __acker:[4 4]
+5802 [SLOT_1027] INFO  o.a.s.d.executor - Finished loading executor __acker:[4 4]
+5812 [SLOT_1027] INFO  o.a.s.d.worker - Started with log levels: {"" #object[org.apache.logging.log4j.Level 0x72b97b3b "INFO"], "org.apache.zookeeper" #object[org.apache.logging.log4j.Level 0x4bb2e089 "WARN"]}
+5820 [SLOT_1027] INFO  o.a.s.d.worker - Worker has topology config {"topology.builtin.metrics.bucket.size.secs" 60, "nimbus.childopts" "-Xmx1024m", "ui.filter.params" nil, "storm.cluster.mode" "local", "storm.messaging.netty.client_worker_threads" 1, "logviewer.max.per.worker.logs.size.mb" 2048, "supervisor.run.worker.as.user" false, "topology.max.task.parallelism" nil, "topology.priority" 29, "zmq.threads" 1, "storm.group.mapping.service" "org.apache.storm.security.auth.ShellBasedGroupsMapping", "transactional.zookeeper.root" "/transactional", "topology.sleep.spout.wait.strategy.time.ms" 1, "scheduler.display.resource" false, "topology.max.replication.wait.time.sec" 60, "drpc.invocations.port" 3773, "supervisor.localizer.cache.target.size.mb" 10240, "topology.multilang.serializer" "org.apache.storm.multilang.JsonSerializer", "storm.messaging.netty.server_worker_threads" 1, "nimbus.blobstore.class" "org.apache.storm.blobstore.LocalFsBlobStore", "resource.aware.scheduler.eviction.strategy" "org.apache.storm.scheduler.resource.strategies.eviction.DefaultEvictionStrategy", "topology.max.error.report.per.interval" 5, "storm.thrift.transport" "org.apache.storm.security.auth.SimpleTransportPlugin", "zmq.hwm" 0, "storm.group.mapping.service.params" nil, "worker.profiler.enabled" false, "storm.principal.tolocal" "org.apache.storm.security.auth.DefaultPrincipalToLocal", "supervisor.worker.shutdown.sleep.secs" 3, "pacemaker.host" "localhost", "storm.zookeeper.retry.times" 5, "ui.actions.enabled" true, "zmq.linger.millis" 0, "supervisor.enable" true, "topology.stats.sample.rate" 0.05, "storm.messaging.netty.min_wait_ms" 100, "worker.log.level.reset.poll.secs" 30, "storm.zookeeper.port" 2000, "supervisor.heartbeat.frequency.secs" 5, "topology.enable.message.timeouts" true, "supervisor.cpu.capacity" 400.0, "drpc.worker.threads" 64, "supervisor.blobstore.download.thread.count" 5, "task.backpressure.poll.secs" 30, "drpc.queue.size" 128, "topology.backpressure.enable" false, "supervisor.blobstore.class" "org.apache.storm.blobstore.NimbusBlobStore", "storm.blobstore.inputstream.buffer.size.bytes" 65536, "topology.shellbolt.max.pending" 100, "drpc.https.keystore.password" "", "nimbus.code.sync.freq.secs" 120, "logviewer.port" 8000, "topology.scheduler.strategy" "org.apache.storm.scheduler.resource.strategies.scheduling.DefaultResourceAwareStrategy", "topology.executor.send.buffer.size" 1024, "resource.aware.scheduler.priority.strategy" "org.apache.storm.scheduler.resource.strategies.priority.DefaultSchedulingPriorityStrategy", "pacemaker.auth.method" "NONE", "storm.daemon.metrics.reporter.plugins" ["org.apache.storm.daemon.metrics.reporters.JmxPreparableReporter"], "topology.worker.logwriter.childopts" "-Xmx64m", "topology.spout.wait.strategy" "org.apache.storm.spout.SleepSpoutWaitStrategy", "ui.host" "0.0.0.0", "topology.submitter.principal" "", "storm.nimbus.retry.interval.millis" 2000, "nimbus.inbox.jar.expiration.secs" 3600, "dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.acker.executors" nil, "topology.fall.back.on.java.serialization" true, "topology.eventlogger.executors" 0, "supervisor.localizer.cleanup.interval.ms" 600000, "storm.zookeeper.servers" ["localhost"], "nimbus.thrift.threads" 64, "logviewer.cleanup.age.mins" 10080, "topology.worker.childopts" nil, "topology.classpath" nil, "supervisor.monitor.frequency.secs" 3, "nimbus.credential.renewers.freq.secs" 600, "topology.skip.missing.kryo.registrations" true, "drpc.authorizer.acl.filename" "drpc-auth-acl.yaml", "pacemaker.kerberos.users" [], "storm.group.mapping.service.cache.duration.secs" 120, "blobstore.dir" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\e3af5b33-c772-4823-b9b7-7ec3071b6530", "topology.testing.always.try.serialize" false, "nimbus.monitor.freq.secs" 10, "storm.health.check.timeout.ms" 5000, "supervisor.supervisors" [], "topology.tasks" nil, "topology.bolts.outgoing.overflow.buffer.enable" false, "storm.messaging.netty.socket.backlog" 500, "topology.workers" 1, "pacemaker.base.threads" 10, "storm.local.dir" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\e3af5b33-c772-4823-b9b7-7ec3071b6530", "worker.childopts" "-Xmx%HEAP-MEM%m -XX:+PrintGCDetails -Xloggc:artifacts/gc.log -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=1M -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=artifacts/heapdump", "storm.auth.simple-white-list.users" [], "topology.disruptor.batch.timeout.millis" 1, "topology.message.timeout.secs" 30, "topology.state.synchronization.timeout.secs" 60, "topology.tuple.serializer" "org.apache.storm.serialization.types.ListDelegateSerializer", "supervisor.supervisors.commands" [], "nimbus.blobstore.expiration.secs" 600, "logviewer.childopts" "-Xmx128m", "topology.environment" nil, "topology.debug" false, "topology.disruptor.batch.size" 100, "storm.disable.symlinks" false, "storm.messaging.netty.max_retries" 300, "ui.childopts" "-Xmx768m", "storm.network.topography.plugin" "org.apache.storm.networktopography.DefaultRackDNSToSwitchMapping", "storm.zookeeper.session.timeout" 20000, "drpc.childopts" "-Xmx768m", "drpc.http.creds.plugin" "org.apache.storm.security.auth.DefaultHttpCredentialsPlugin", "storm.zookeeper.connection.timeout" 15000, "storm.zookeeper.auth.user" nil, "storm.meta.serialization.delegate" "org.apache.storm.serialization.GzipThriftSerializationDelegate", "topology.max.spout.pending" nil, "storm.codedistributor.class" "org.apache.storm.codedistributor.LocalFileSystemCodeDistributor", "nimbus.supervisor.timeout.secs" 60, "nimbus.task.timeout.secs" 30, "storm.zookeeper.superACL" nil, "drpc.port" 3772, "pacemaker.max.threads" 50, "storm.zookeeper.retry.intervalceiling.millis" 30000, "nimbus.thrift.port" 6627, "storm.auth.simple-acl.admins" [], "topology.component.cpu.pcore.percent" 10.0, "supervisor.memory.capacity.mb" 3072.0, "storm.nimbus.retry.times" 5, "supervisor.worker.start.timeout.secs" 120, "storm.zookeeper.retry.interval" 1000, "logs.users" nil, "storm.cluster.metrics.consumer.publish.interval.secs" 60, "worker.profiler.command" "flight.bash", "transactional.zookeeper.port" nil, "drpc.max_buffer_size" 1048576, "pacemaker.thread.timeout" 10, "task.credentials.poll.secs" 30, "blobstore.superuser" "Administrator", "drpc.https.keystore.type" "JKS", "topology.worker.receiver.thread.count" 1, "topology.state.checkpoint.interval.ms" 1000, "supervisor.slots.ports" [6700 6701 6702 6703], "topology.transfer.buffer.size" 1024, "storm.health.check.dir" "healthchecks", "topology.worker.shared.thread.pool.size" 4, "drpc.authorizer.acl.strict" false, "nimbus.file.copy.expiration.secs" 600, "worker.profiler.childopts" "-XX:+UnlockCommercialFeatures -XX:+FlightRecorder", "topology.executor.receive.buffer.size" 1024, "backpressure.disruptor.low.watermark" 0.4, "topology.users" [], "nimbus.task.launch.secs" 120, "storm.local.mode.zmq" false, "storm.messaging.netty.buffer_size" 5242880, "storm.cluster.state.store" "org.apache.storm.cluster_state.zookeeper_state_factory", "worker.heartbeat.frequency.secs" 1, "storm.log4j2.conf.dir" "log4j2", "ui.http.creds.plugin" "org.apache.storm.security.auth.DefaultHttpCredentialsPlugin", "storm.zookeeper.root" "/storm", "topology.submitter.user" "Administrator", "topology.tick.tuple.freq.secs" nil, "drpc.https.port" -1, "storm.workers.artifacts.dir" "workers-artifacts", "supervisor.blobstore.download.max_retries" 3, "task.refresh.poll.secs" 10, "storm.exhibitor.port" 8080, "task.heartbeat.frequency.secs" 3, "pacemaker.port" 6699, "storm.messaging.netty.max_wait_ms" 1000, "topology.component.resources.offheap.memory.mb" 0.0, "drpc.http.port" 3774, "topology.error.throttle.interval.secs" 10, "storm.messaging.transport" "org.apache.storm.messaging.netty.Context", "topology.disable.loadaware.messaging" false, "storm.messaging.netty.authentication" false, "topology.component.resources.onheap.memory.mb" 128.0, "file" "word", "topology.kryo.factory" "org.apache.storm.serialization.DefaultKryoFactory", "topology.kryo.register" nil, "worker.gc.childopts" "", "nimbus.topology.validator" "org.apache.storm.nimbus.DefaultTopologyValidator", "nimbus.seeds" ["localhost"], "nimbus.queue.size" 100000, "nimbus.cleanup.inbox.freq.secs" 600, "storm.blobstore.replication.factor" 3, "worker.heap.memory.mb" 768, "logviewer.max.sum.worker.logs.size.mb" 4096, "pacemaker.childopts" "-Xmx1024m", "ui.users" nil, "transactional.zookeeper.servers" nil, "supervisor.worker.timeout.secs" 30, "storm.zookeeper.auth.password" nil, "storm.blobstore.acl.validation.enabled" false, "client.blobstore.class" "org.apache.storm.blobstore.NimbusBlobStore", "storm.thrift.socket.timeout.ms" 600000, "supervisor.childopts" "-Xmx256m", "topology.worker.max.heap.size.mb" 768.0, "ui.http.x-frame-options" "DENY", "backpressure.disruptor.high.watermark" 0.9, "ui.filter" nil, "ui.header.buffer.bytes" 4096, "topology.min.replication.count" 1, "topology.disruptor.wait.timeout.millis" 1000, "storm.nimbus.retry.intervalceiling.millis" 60000, "topology.trident.batch.emit.interval.millis" 50, "storm.auth.simple-acl.users" [], "drpc.invocations.threads" 64, "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "ui.port" 8080, "topology.kryo.decorators" [], "storm.id" "wordcount-1-1515052987", "topology.name" "wordcount", "storm.exhibitor.poll.uripath" "/exhibitor/v1/cluster/list", "storm.messaging.netty.transfer.batch.size" 262144, "logviewer.appender.name" "A1", "nimbus.thrift.max_buffer_size" 1048576, "storm.auth.simple-acl.users.commands" [], "drpc.request.timeout.secs" 600}
+5820 [SLOT_1027] INFO  o.a.s.d.worker - Worker b05f1776-4038-4316-928e-879ee6f19efd for storm wordcount-1-1515052987 on 94a29351-75af-4c90-a823-940455537586:1027 has finished loading
+5820 [SLOT_1027] INFO  o.a.s.d.s.Container - SET worker-user b05f1776-4038-4316-928e-879ee6f19efd Administrator
+5821 [SLOT_1027] INFO  o.a.s.d.s.Slot - STATE WAITING_FOR_BLOB_LOCALIZATION msInState: 329 -> WAITING_FOR_WORKER_START msInState: 1 topo:wordcount-1-1515052987 worker:b05f1776-4038-4316-928e-879ee6f19efd
+5822 [SLOT_1027] INFO  o.a.s.d.s.Slot - SLOT 1027: Changing current assignment from null to LocalAssignment(topology_id:wordcount-1-1515052987, executors:[ExecutorInfo(task_start:4, task_end:4), ExecutorInfo(task_start:3, task_end:3), ExecutorInfo(task_start:2, task_end:2), ExecutorInfo(task_start:1, task_end:1)], resources:WorkerResources(mem_on_heap:0.0, mem_off_heap:0.0, cpu:0.0), owner:Administrator)
+5827 [SLOT_1027] INFO  o.a.s.d.s.Slot - STATE WAITING_FOR_WORKER_START msInState: 6 topo:wordcount-1-1515052987 worker:b05f1776-4038-4316-928e-879ee6f19efd -> RUNNING msInState: 0 topo:wordcount-1-1515052987 worker:b05f1776-4038-4316-928e-879ee6f19efd
+6602 [refresh-active-timer] INFO  o.a.s.d.worker - All connections are ready for worker 94a29351-75af-4c90-a823-940455537586:1027 with id b05f1776-4038-4316-928e-879ee6f19efd
+6657 [Thread-18-WordNormalizerBolt-executor[2 2]] INFO  o.a.s.d.executor - Preparing bolt WordNormalizerBolt:(2)
+prepare
+6662 [Thread-18-WordNormalizerBolt-executor[2 2]] INFO  o.a.s.d.executor - Prepared bolt WordNormalizerBolt:(2)
+6672 [Thread-20-WordReadSpout-executor[3 3]] INFO  o.a.s.d.executor - Opening spout WordReadSpout:(3)
+open !
+6675 [Thread-20-WordReadSpout-executor[3 3]] INFO  o.a.s.d.executor - Opened spout WordReadSpout:(3)
+6676 [Thread-20-WordReadSpout-executor[3 3]] INFO  o.a.s.d.executor - Activating spout WordReadSpout:(3)
+activate
+execute
+execute
+execute
+execute
+execute
+execute
+execute
+execute
+6685 [Thread-22-WordCountBolt-executor[1 1]] INFO  o.a.s.d.executor - Preparing bolt WordCountBolt:(1)
+execute
+prepare
+6685 [Thread-22-WordCountBolt-executor[1 1]] INFO  o.a.s.d.executor - Prepared bolt WordCountBolt:(1)
+execute
+execute
+execute
+execute
+execute
+6694 [Thread-24-__system-executor[-1 -1]] INFO  o.a.s.d.executor - Preparing bolt __system:(-1)
+6696 [Thread-24-__system-executor[-1 -1]] INFO  o.a.s.d.executor - Prepared bolt __system:(-1)
+6706 [Thread-26-__acker-executor[4 4]] INFO  o.a.s.d.executor - Preparing bolt __acker:(4)
+6707 [Thread-26-__acker-executor[4 4]] INFO  o.a.s.d.executor - Prepared bolt __acker:(4)
+8595 [main] INFO  o.a.s.d.nimbus - Shutting down master
+8600 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+8603 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d50003
+8611 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d50003 closed
+8611 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+8612 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+8612 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3207 which had sessionid 0x160c031f0d50003
+8616 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d50004
+8623 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d50004 closed
+8623 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+8624 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3210 which had sessionid 0x160c031f0d50004
+8624 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+8626 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d50000
+8631 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d50000 closed
+8632 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3198 which had sessionid 0x160c031f0d50000
+8632 [main] INFO  o.a.s.zookeeper - closing zookeeper connection of leader elector.
+8632 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+8632 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+8634 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d50001
+8640 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d50001 closed
+8640 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+8640 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3201 which had sessionid 0x160c031f0d50001
+8640 [main] INFO  o.a.s.d.nimbus - Shut down master
+8641 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+8642 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d50006
+8649 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3216 which had sessionid 0x160c031f0d50006
+8649 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d50006 closed
+8649 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+8649 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+8652 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d50008
+8659 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d50008 closed
+8659 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3222 which had sessionid 0x160c031f0d50008
+8659 [main] INFO  o.a.s.d.s.ReadClusterState - Setting Thread[SLOT_1024,5,main] assignment to null
+8659 [main] INFO  o.a.s.d.s.ReadClusterState - Setting Thread[SLOT_1025,5,main] assignment to null
+8659 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+8660 [main] INFO  o.a.s.d.s.ReadClusterState - Setting Thread[SLOT_1026,5,main] assignment to null
+8660 [main] INFO  o.a.s.d.s.ReadClusterState - Waiting for Thread[SLOT_1024,5,main] to be EMPTY, currently EMPTY
+8660 [main] INFO  o.a.s.d.s.ReadClusterState - Waiting for Thread[SLOT_1025,5,main] to be EMPTY, currently EMPTY
+8660 [main] INFO  o.a.s.d.s.ReadClusterState - Waiting for Thread[SLOT_1026,5,main] to be EMPTY, currently EMPTY
+8660 [main] INFO  o.a.s.d.s.Supervisor - Shutting down supervisor 0e1d4daa-8d93-4baa-b700-aa6f1a757885
+8661 [Thread-10] INFO  o.a.s.e.EventManagerImp - Event manager interrupted
+8686 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+8686 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d5000a
+8691 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d5000a closed
+8691 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+8691 [main] INFO  o.a.s.d.s.ReadClusterState - Setting Thread[SLOT_1027,5,main] assignment to null
+8691 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3228 which had sessionid 0x160c031f0d5000a
+8691 [main] INFO  o.a.s.d.s.ReadClusterState - Setting Thread[SLOT_1028,5,main] assignment to null
+8691 [main] INFO  o.a.s.d.s.ReadClusterState - Setting Thread[SLOT_1029,5,main] assignment to null
+8691 [main] INFO  o.a.s.d.s.ReadClusterState - Waiting for Thread[SLOT_1027,5,main] to be EMPTY, currently RUNNING
+8827 [SLOT_1027] WARN  o.a.s.d.s.Slot - SLOT 1027: Assignment Changed from LocalAssignment(topology_id:wordcount-1-1515052987, executors:[ExecutorInfo(task_start:4, task_end:4), ExecutorInfo(task_start:3, task_end:3), ExecutorInfo(task_start:2, task_end:2), ExecutorInfo(task_start:1, task_end:1)], resources:WorkerResources(mem_on_heap:0.0, mem_off_heap:0.0, cpu:0.0), owner:Administrator) to null
+8827 [SLOT_1027] INFO  o.a.s.ProcessSimulator - Begin killing process b05f1776-4038-4316-928e-879ee6f19efd
+8828 [SLOT_1027] INFO  o.a.s.d.worker - Shutting down worker wordcount-1-1515052987 94a29351-75af-4c90-a823-940455537586 1027
+8828 [SLOT_1027] INFO  o.a.s.d.worker - Terminating messaging context
+8828 [SLOT_1027] INFO  o.a.s.d.worker - Shutting down executors
+8829 [SLOT_1027] INFO  o.a.s.d.executor - Shutting down executor WordNormalizerBolt:[2 2]
+8833 [Thread-17-disruptor-executor[2 2]-send-queue] INFO  o.a.s.util - Async loop interrupted!
+8835 [Thread-18-WordNormalizerBolt-executor[2 2]] INFO  o.a.s.util - Async loop interrupted!
+cleanup
+8837 [SLOT_1027] INFO  o.a.s.d.executor - Shut down executor WordNormalizerBolt:[2 2]
+8837 [SLOT_1027] INFO  o.a.s.d.executor - Shutting down executor WordReadSpout:[3 3]
+8838 [Thread-19-disruptor-executor[3 3]-send-queue] INFO  o.a.s.util - Async loop interrupted!
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.practice.storm.Topology$WordReadSpout.nextTuple(Topology.java:199)
+	at org.apache.storm.daemon.executor$fn__4962$fn__4977$fn__5008.invoke(executor.clj:646)
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:484)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.lang.Thread.run(Thread.java:745)
+8845 [Thread-20-WordReadSpout-executor[3 3]] INFO  o.a.s.util - Async loop interrupted!
+close
+8846 [SLOT_1027] INFO  o.a.s.d.executor - Shut down executor WordReadSpout:[3 3]
+8846 [SLOT_1027] INFO  o.a.s.d.executor - Shutting down executor WordCountBolt:[1 1]
+8847 [Thread-21-disruptor-executor[1 1]-send-queue] INFO  o.a.s.util - Async loop interrupted!
+8847 [Thread-22-WordCountBolt-executor[1 1]] INFO  o.a.s.util - Async loop interrupted!
+cleanup
+copyright:1
+software:1
+use:1
+express:1
+language:1
+kind,:1
+required:1
+without:1
+either:1
+apache:1
+permissions:1
+"license");:1
+you:1
+limitations:1
+obtain:1
+implied.:1
+law:1
+writing,:1
+in:1
+work:1
+this:1
+distributed:1
+applicable:1
+is:1
+license,:1
+version:1
+license.:1
+an:1
+regarding:1
+license:1
+warranties:1
+at:1
+agreements.:1
+is":1
+except:1
+(asf):1
+conditions:1
+http://www.apache.org/licenses/license-2.0:1
+additional:1
+for:1
+foundation:1
+see:1
+not:1
+contributor:1
+file:1
+ownership.:1
+"as:1
+unless:1
+and:1
+of:1
+by:1
+(the:1
+copy:1
+agreed:1
+notice:1
+on:1
+a:1
+licensed:1
+or:1
+may:1
+more:1
+one:1
+basis,:1
+specific:1
+any:1
+the:1
+with:1
+licenses:1
+governing:1
+2.0:1
+asf:1
+compliance:1
+information:1
+to:1
+under:1
+8852 [SLOT_1027] INFO  o.a.s.d.executor - Shut down executor WordCountBolt:[1 1]
+8852 [SLOT_1027] INFO  o.a.s.d.executor - Shutting down executor __system:[-1 -1]
+8852 [Thread-24-__system-executor[-1 -1]] INFO  o.a.s.util - Async loop interrupted!
+8852 [Thread-23-disruptor-executor[-1 -1]-send-queue] INFO  o.a.s.util - Async loop interrupted!
+8854 [SLOT_1027] INFO  o.a.s.d.executor - Shut down executor __system:[-1 -1]
+8854 [SLOT_1027] INFO  o.a.s.d.executor - Shutting down executor __acker:[4 4]
+8854 [Thread-26-__acker-executor[4 4]] INFO  o.a.s.util - Async loop interrupted!
+8854 [Thread-25-disruptor-executor[4 4]-send-queue] INFO  o.a.s.util - Async loop interrupted!
+8855 [SLOT_1027] INFO  o.a.s.d.executor - Shut down executor __acker:[4 4]
+8855 [SLOT_1027] INFO  o.a.s.d.worker - Shut down executors
+8855 [SLOT_1027] INFO  o.a.s.d.worker - Shutting down transfer thread
+8856 [Thread-27-disruptor-worker-transfer-queue] INFO  o.a.s.util - Async loop interrupted!
+8856 [SLOT_1027] INFO  o.a.s.d.worker - Shut down transfer thread
+8856 [SLOT_1027] INFO  o.a.s.d.worker - Shut down backpressure thread
+8859 [SLOT_1027] INFO  o.a.s.d.worker - Shutting down default resources
+8859 [SLOT_1027] INFO  o.a.s.d.worker - Shut down default resources
+8859 [SLOT_1027] INFO  o.a.s.d.worker - Trigger any worker shutdown hooks
+8876 [SLOT_1027] INFO  o.a.s.d.worker - Disconnecting from storm cluster state context
+8876 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+8877 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d50011
+8884 [SLOT_1027] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d50011 closed
+8884 [SLOT_1027-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+8884 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3253 which had sessionid 0x160c031f0d50011
+8884 [SLOT_1027] INFO  o.a.s.d.worker - Shut down worker wordcount-1-1515052987 94a29351-75af-4c90-a823-940455537586 1027
+8884 [SLOT_1027] INFO  o.a.s.ProcessSimulator - Successfully killed process b05f1776-4038-4316-928e-879ee6f19efd
+8884 [SLOT_1027] INFO  o.a.s.d.s.Container - Killing 94a29351-75af-4c90-a823-940455537586:b05f1776-4038-4316-928e-879ee6f19efd
+9791 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+9891 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+9991 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+10091 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+10191 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+10291 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+10391 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+10491 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+10591 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+10691 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+10791 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+10891 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+10991 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+11091 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+11191 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+11291 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+11391 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+11491 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+11592 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+11692 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+11792 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+11885 [SLOT_1027] INFO  o.a.s.d.s.Slot - STATE RUNNING msInState: 6058 topo:wordcount-1-1515052987 worker:b05f1776-4038-4316-928e-879ee6f19efd -> KILL msInState: 0 topo:wordcount-1-1515052987 worker:b05f1776-4038-4316-928e-879ee6f19efd
+11885 [SLOT_1027] INFO  o.a.s.d.s.Container - GET worker-user for b05f1776-4038-4316-928e-879ee6f19efd
+11888 [SLOT_1027] WARN  o.a.s.d.s.Slot - SLOT 1027 all processes are dead...
+11888 [SLOT_1027] INFO  o.a.s.d.s.Container - Cleaning up 94a29351-75af-4c90-a823-940455537586:b05f1776-4038-4316-928e-879ee6f19efd
+11888 [SLOT_1027] INFO  o.a.s.d.s.Container - GET worker-user for b05f1776-4038-4316-928e-879ee6f19efd
+11889 [SLOT_1027] INFO  o.a.s.d.s.AdvancedFSOps - Deleting path C:\Users\ADMINI~1\AppData\Local\Temp\790dfae2-6b04-43f9-9aef-e8c9da3e2560\workers\b05f1776-4038-4316-928e-879ee6f19efd\heartbeats
+11892 [main] WARN  o.a.s.d.s.ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+11899 [SLOT_1027] INFO  o.a.s.d.s.AdvancedFSOps - Deleting path C:\Users\ADMINI~1\AppData\Local\Temp\790dfae2-6b04-43f9-9aef-e8c9da3e2560\workers\b05f1776-4038-4316-928e-879ee6f19efd\pids
+11900 [SLOT_1027] INFO  o.a.s.d.s.AdvancedFSOps - Deleting path C:\Users\ADMINI~1\AppData\Local\Temp\790dfae2-6b04-43f9-9aef-e8c9da3e2560\workers\b05f1776-4038-4316-928e-879ee6f19efd\tmp
+11902 [SLOT_1027] INFO  o.a.s.d.s.AdvancedFSOps - Deleting path C:\Users\ADMINI~1\AppData\Local\Temp\790dfae2-6b04-43f9-9aef-e8c9da3e2560\workers\b05f1776-4038-4316-928e-879ee6f19efd
+11903 [SLOT_1027] INFO  o.a.s.d.s.Container - REMOVE worker-user b05f1776-4038-4316-928e-879ee6f19efd
+11903 [SLOT_1027] INFO  o.a.s.d.s.AdvancedFSOps - Deleting path C:\Users\ADMINI~1\AppData\Local\Temp\790dfae2-6b04-43f9-9aef-e8c9da3e2560\workers-users\b05f1776-4038-4316-928e-879ee6f19efd
+11904 [SLOT_1027] INFO  o.a.s.l.AsyncLocalizer - Released blob reference wordcount-1-1515052987 1027 Cleaning up BLOB references...
+11907 [SLOT_1027] INFO  o.a.s.l.AsyncLocalizer - Released blob reference wordcount-1-1515052987 1027 Cleaning up basic files...
+11908 [SLOT_1027] INFO  o.a.s.d.s.AdvancedFSOps - Deleting path C:\Users\ADMINI~1\AppData\Local\Temp\790dfae2-6b04-43f9-9aef-e8c9da3e2560\supervisor\stormdist\wordcount-1-1515052987
+11911 [SLOT_1027] INFO  o.a.s.d.s.Slot - STATE KILL msInState: 26 topo:wordcount-1-1515052987 worker:null -> EMPTY msInState: 0
+11911 [SLOT_1027] INFO  o.a.s.d.s.Slot - SLOT 1027: Changing current assignment from LocalAssignment(topology_id:wordcount-1-1515052987, executors:[ExecutorInfo(task_start:4, task_end:4), ExecutorInfo(task_start:3, task_end:3), ExecutorInfo(task_start:2, task_end:2), ExecutorInfo(task_start:1, task_end:1)], resources:WorkerResources(mem_on_heap:0.0, mem_off_heap:0.0, cpu:0.0), owner:Administrator) to null
+11992 [main] INFO  o.a.s.d.s.ReadClusterState - Waiting for Thread[SLOT_1028,5,main] to be EMPTY, currently EMPTY
+11992 [main] INFO  o.a.s.d.s.ReadClusterState - Waiting for Thread[SLOT_1029,5,main] to be EMPTY, currently EMPTY
+11992 [main] INFO  o.a.s.d.s.Supervisor - Shutting down supervisor 94a29351-75af-4c90-a823-940455537586
+11994 [Thread-14] INFO  o.a.s.e.EventManagerImp - Event manager interrupted
+11995 [Curator-Framework-0] INFO  o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+11998 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Processed session termination for sessionid: 0x160c031f0d5000c
+12006 [main] INFO  o.a.s.s.o.a.z.ZooKeeper - Session: 0x160c031f0d5000c closed
+12006 [main-EventThread] INFO  o.a.s.s.o.a.z.ClientCnxn - EventThread shut down
+12006 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxn - Closed socket connection for client /127.0.0.1:3234 which had sessionid 0x160c031f0d5000c
+12008 [main] INFO  o.a.s.testing - Shutting down in process zookeeper
+12009 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  o.a.s.s.o.a.z.s.NIOServerCnxnFactory - NIOServerCnxn factory exited run method
+12009 [main] INFO  o.a.s.s.o.a.z.s.ZooKeeperServer - shutting down
+12009 [main] INFO  o.a.s.s.o.a.z.s.SessionTrackerImpl - Shutting down
+12010 [main] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - Shutting down
+12010 [main] INFO  o.a.s.s.o.a.z.s.SyncRequestProcessor - Shutting down
+12010 [ProcessThread(sid:0 cport:-1):] INFO  o.a.s.s.o.a.z.s.PrepRequestProcessor - PrepRequestProcessor exited loop!
+12010 [SyncThread:0] INFO  o.a.s.s.o.a.z.s.SyncRequestProcessor - SyncRequestProcessor exited!
+12010 [main] INFO  o.a.s.s.o.a.z.s.FinalRequestProcessor - shutdown of request processor complete
+12011 [main] INFO  o.a.s.testing - Done shutting down in process zookeeper
+12011 [main] INFO  o.a.s.testing - Deleting temporary path C:\Users\ADMINI~1\AppData\Local\Temp\e3af5b33-c772-4823-b9b7-7ec3071b6530
+12025 [main] INFO  o.a.s.testing - Deleting temporary path C:\Users\ADMINI~1\AppData\Local\Temp\e831306c-eb83-4fd6-8270-7501c1ccac50
+12027 [main] INFO  o.a.s.testing - Unable to delete file: C:\Users\ADMINI~1\AppData\Local\Temp\e831306c-eb83-4fd6-8270-7501c1ccac50\version-2\log.1
+12027 [main] INFO  o.a.s.testing - Deleting temporary path C:\Users\ADMINI~1\AppData\Local\Temp\b0409fdf-8c65-48a9-923a-9a51641b7fa6
+12032 [main] INFO  o.a.s.testing - Deleting temporary path C:\Users\ADMINI~1\AppData\Local\Temp\790dfae2-6b04-43f9-9aef-e8c9da3e2560
+12288 [SessionTracker] INFO  o.a.s.s.o.a.z.s.SessionTrackerImpl - SessionTrackerImpl exited loop!
