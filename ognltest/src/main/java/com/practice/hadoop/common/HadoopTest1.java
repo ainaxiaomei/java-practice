@@ -23,6 +23,7 @@ import org.apache.hadoop.hdfs.DistributedFileSystem;
 import org.apache.hadoop.io.SequenceFile;
 import org.apache.hadoop.io.SequenceFile.CompressionType;
 import org.apache.hadoop.io.SequenceFile.Metadata;
+import org.apache.hadoop.io.SequenceFile.Reader;
 import org.apache.hadoop.io.SequenceFile.Writer;
 import org.apache.hadoop.io.SequenceFile.Writer.Option;
 import org.apache.hadoop.io.Text;
@@ -155,6 +156,30 @@ public class HadoopTest1 {
 			}
 
 		}
+
+	}
+	
+	/**
+	 * 读取sequence文件
+	 * 
+	 * @throws IOException
+	 */
+	@Test
+	public void sequenceFileTest2() throws IOException {
+		Configuration conf = new Configuration();
+		Reader reader = new Reader(conf,Reader.file(new Path("/sunqi/sequence")));
+		Text key = new Text();
+		Text value = new Text();
+		while(reader.next(key,value)) {
+			System.out.println("key is : \n" + key);
+			System.out.println("value is : \n" + value);
+			System.out.println("---------");
+		}
+		
+		System.out.println(value);
+		
+		reader.close();
+		
 
 	}
 
