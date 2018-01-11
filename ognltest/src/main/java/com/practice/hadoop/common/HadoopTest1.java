@@ -20,6 +20,8 @@ import org.apache.hadoop.fs.LocatedFileStatus;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.fs.RemoteIterator;
 import org.apache.hadoop.hdfs.DistributedFileSystem;
+import org.apache.hadoop.io.BytesWritable;
+import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.SequenceFile;
 import org.apache.hadoop.io.SequenceFile.CompressionType;
 import org.apache.hadoop.io.SequenceFile.Metadata;
@@ -179,6 +181,36 @@ public class HadoopTest1 {
 		System.out.println(value);
 		
 		reader.close();
+		
+
+	}
+	
+	/**
+	 * 读取sequence文件
+	 * 
+	 * @throws IOException
+	 */
+	@Test
+	public void sequenceFilReadTest2() throws IOException {
+		
+		Configuration  config = new Configuration();
+		
+		RemoteIterator<LocatedFileStatus> itr = fs.listFiles(new Path("/flume/lmsLogs"), false);
+		while(itr.hasNext()){
+			
+			System.out.println("---------");
+			Path path = itr.next().getPath();
+			System.out.println("处理文件 :" + path);
+			SequenceFile.Reader reader = new Reader(config, Reader.file(path));
+			LongWritable key = new LongWritable();
+			BytesWritable val = new BytesWritable();
+			while(reader.next(key, val)){
+				System.out.println(new String(val.getBytes()));
+			}
+			System.out.println("key 是 :" + key);
+			reader.close();
+			
+		}
 		
 
 	}
