@@ -19,9 +19,7 @@
 		<tomcat.version>8.5.2</tomcat.version>
 	</properties>
 
-
 	<dependencies>
-	    
 	    <dependency>
 			<groupId>com.gilt.flume</groupId>
 			<artifactId>logback-flume-appender</artifactId>

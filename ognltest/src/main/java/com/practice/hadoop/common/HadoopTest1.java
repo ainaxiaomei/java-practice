@@ -46,6 +46,8 @@ public class HadoopTest1 {
 		fs = FileSystem.get(conf);
 	}
 
+	
+	
 	@Test
 	public void addTest() throws IOException {
 
