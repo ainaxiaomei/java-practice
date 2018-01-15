@@ -85,6 +85,8 @@ public class LogCount {
 		
 		System.out.println(job.getMapOutputKeyClass());
 		System.out.println(job.getMapOutputValueClass());
+		System.out.println(job.getOutputKeyClass());
+		System.out.println(job.getOutputValueClass());
 		logger.info("mapper key类型{}", job.getMapOutputKeyClass());
 		logger.info("mapper value类型{}", job.getMapOutputValueClass());
 

@@ -30,6 +30,12 @@
 			<artifactId>governator</artifactId>
 			<version>1.17.4</version>
 			<scope>runtime</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.inject</groupId>
+					<artifactId>javax.inject</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<!-- <dependency> <groupId>org.apache.storm</groupId> <artifactId>storm-core</artifactId> 
 			<version>1.1.1</version> <scope>provided</scope> <exclusions> <exclusion> 
@@ -48,6 +54,10 @@
 				<exclusion>
 					<groupId>javax.servlet</groupId>
 					<artifactId>servlet-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.inject</groupId>
+					<artifactId>javax.inject</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
