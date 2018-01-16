@@ -100,6 +100,10 @@ public class EurekaInstanceTest {
     	
     	
     	
+    	mamger.setInstanceStatus(InstanceStatus.UP);
+    	
+    	instanceInfo = client.getNextServerFromEureka("eureka.mydomain.net", false);
+    	
     	System.out.println("------------------Runtime Info ------------------");
     	System.out.println("AllKnownRegions : " + client.getAllKnownRegions());
     	System.out.println("applications : ");
