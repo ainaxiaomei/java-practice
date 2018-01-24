@@ -6,6 +6,8 @@ import com.netflix.appinfo.providers.EurekaConfigBasedInstanceInfoProvider;
 import com.netflix.discovery.DiscoveryClient;
 import com.netflix.discovery.EurekaClient;
 
+import java.util.List;
+
 import javax.swing.plaf.synth.SynthSpinnerUI;
 
 import com.netflix.appinfo.ApplicationInfoManager;
@@ -13,6 +15,8 @@ import com.netflix.appinfo.MyDataCenterInstanceConfig;
 import com.netflix.config.DynamicPropertyFactory;
 import com.netflix.discovery.DefaultEurekaClientConfig;
 import com.netflix.discovery.EurekaClientConfig;
+import com.netflix.discovery.shared.Application;
+import com.netflix.discovery.shared.Applications;
 
 /**
  * Sample Eureka service that registers with Eureka to receive and process requests.
@@ -97,21 +101,31 @@ public class EurekaInstanceTest {
     	System.out.println("shouldUnregisterOnShutdown : " + clientConfig.shouldUnregisterOnShutdown());
     	System.out.println("UseDnsForFetchingServiceUrls : " + clientConfig.shouldUseDnsForFetchingServiceUrls());
     	
-    	
-    	
-    	
     	mamger.setInstanceStatus(InstanceStatus.UP);
     	
-    	instanceInfo = client.getNextServerFromEureka("eureka.mydomain.net", false);
+    	Applications applications = client.getApplications();
+    	System.out.println("-------------");
+    	List<Application> ls = applications.getRegisteredApplications();
+    	System.out.println("一共有" + ls.size() + "个应用");
+    	for(Application app : ls){
+    		System.out.println("[");
+    		System.out.println("\t 应用名: " + app.getName());
+    		List<InstanceInfo> instanceList = app.getInstances();
+    		System.out.println("\t 实例数: " + instanceList.size());
+    		System.out.println("\t instanceId: " + instanceList.get(0).getInstanceId());
+    		System.out.println("\t AppGroupName: " + instanceList.get(0).getAppGroupName());
+    		System.out.println("\t HealthCheckUrl: " + instanceList.get(0).getHealthCheckUrl());
+    		System.out.println("\t ASGName: " + instanceList.get(0).getASGName());
+    		System.out.println("\t HomePageUrl: " + instanceList.get(0).getHomePageUrl());
+    		System.out.println("\t HostName: " + instanceList.get(0).getHostName());
+    		System.out.println("\t Id: " + instanceList.get(0).getId());
+    		System.out.println("\t IPAddr: " + instanceList.get(0).getIPAddr());
+    		System.out.println("\t VIPAddress: " + instanceList.get(0).getVIPAddress());
+    		System.out.println("\t ActionType: " + instanceList.get(0).getActionType());
+    		System.out.println();
+    		System.out.println("]");
+    	}
     	
-    	System.out.println("------------------Runtime Info ------------------");
-    	System.out.println("AllKnownRegions : " + client.getAllKnownRegions());
-    	System.out.println("applications : ");
-    	client.getApplications().getRegisteredApplications().forEach((app) ->{
-    		System.out.println("appname : " + app.getName());
-    		System.out.println("instances size :" + app.size());
-    		System.out.println(app.getInstances());
-    	});
     	
     	for(;;){
     		
