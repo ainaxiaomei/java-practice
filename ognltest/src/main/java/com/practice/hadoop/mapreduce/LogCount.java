@@ -24,13 +24,13 @@ public class LogCount {
 
 	private static Logger logger = LoggerFactory.getLogger(LogCount.class);
 
-	static class LoggerMapper extends Mapper<Object, BytesWritable, LongWritable, IntWritable> {
+	static class LoggerMapper extends Mapper<Object, BytesWritable, LongWritable, Text> {
 
 		private static Logger logger = LoggerFactory.getLogger(LoggerMapper.class);
 
 		@Override
 		protected void map(Object key, BytesWritable value,
-				Mapper<Object, BytesWritable, LongWritable, IntWritable>.Context context)
+				Mapper<Object, BytesWritable, LongWritable, Text>.Context context)
 				throws IOException, InterruptedException {
 			Log.info("-------------------");
 			logger.info("key is : {}", key);
@@ -41,7 +41,7 @@ public class LogCount {
 			while (token.hasMoreTokens()) {
 				String val = token.nextToken();
 				if ("INFO".equals(val)) {
-					context.write(new LongWritable(1), new IntWritable(1));
+					//context.write(new LongWritable(1), new IntWritable(1));
 				}
 			}
 		}
