@@ -112,17 +112,19 @@ public class EurekaInstanceTest {
     		System.out.println("\t 应用名: " + app.getName());
     		List<InstanceInfo> instanceList = app.getInstances();
     		System.out.println("\t 实例数: " + instanceList.size());
-    		System.out.println("\t instanceId: " + instanceList.get(0).getInstanceId());
-    		System.out.println("\t AppGroupName: " + instanceList.get(0).getAppGroupName());
-    		System.out.println("\t HealthCheckUrl: " + instanceList.get(0).getHealthCheckUrl());
-    		System.out.println("\t ASGName: " + instanceList.get(0).getASGName());
-    		System.out.println("\t HomePageUrl: " + instanceList.get(0).getHomePageUrl());
-    		System.out.println("\t HostName: " + instanceList.get(0).getHostName());
-    		System.out.println("\t Id: " + instanceList.get(0).getId());
-    		System.out.println("\t IPAddr: " + instanceList.get(0).getIPAddr());
-    		System.out.println("\t VIPAddress: " + instanceList.get(0).getVIPAddress());
-    		System.out.println("\t ActionType: " + instanceList.get(0).getActionType());
-    		System.out.println();
+    		if(instanceList.size() > 0){
+    			System.out.println("\t instanceId: " + instanceList.get(0).getInstanceId());
+        		System.out.println("\t AppGroupName: " + instanceList.get(0).getAppGroupName());
+        		System.out.println("\t HealthCheckUrl: " + instanceList.get(0).getHealthCheckUrl());
+        		System.out.println("\t ASGName: " + instanceList.get(0).getASGName());
+        		System.out.println("\t HomePageUrl: " + instanceList.get(0).getHomePageUrl());
+        		System.out.println("\t HostName: " + instanceList.get(0).getHostName());
+        		System.out.println("\t Id: " + instanceList.get(0).getId());
+        		System.out.println("\t IPAddr: " + instanceList.get(0).getIPAddr());
+        		System.out.println("\t VIPAddress: " + instanceList.get(0).getVIPAddress());
+        		System.out.println("\t ActionType: " + instanceList.get(0).getActionType());
+    		}
+    		
     		System.out.println("]");
     	}
     	

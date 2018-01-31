@@ -2,7 +2,8 @@
 <configuration>
 
 	<root>
-		<level value="ERROR" />
+		<level value="DEBUG" />
+		
 	</root>
 
 </configuration>

@@ -10,6 +10,7 @@ import java.util.Date;
 
 import org.apache.hadoop.conf.Configurable;
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.BlockLocation;
 import org.apache.hadoop.fs.FSDataInputStream;
 import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.FSInputStream;
@@ -88,7 +89,7 @@ public class HadoopTest1 {
 	public void HDFSTest() throws IOException {
 		Configuration conf = new Configuration();
 		Hdfs hdfs = (Hdfs) Hdfs.get(URI.create("hdfs://192.168.5.12:8020"), conf);
-		Path dst = new Path("/tmp/hive");
+		Path dst = new Path("/");
 		RemoteIterator<LocatedFileStatus> itr = hdfs.listLocatedStatus(dst);
 		while (itr.hasNext()) {
 			System.out.println("---------");
@@ -105,7 +106,19 @@ public class HadoopTest1 {
 			System.out.println("是否加密: " + fileStatus.isEncrypted());
 			System.out.println("是否是符号链接: " + fileStatus.isSymlink());
 			System.out.println("权限信息: " + fileStatus.getPermission());
-			System.out.println("块位置: " + Arrays.toString(fileStatus.getBlockLocations()));
+			System.out.println("块位置: ");
+			System.out.println("[");
+			for(BlockLocation loc : fileStatus.getBlockLocations()){
+				System.out.println("\t主机:" + Arrays.toString(loc.getHosts()));
+				System.out.println("\t长度:" + loc.getLength());
+				System.out.println("\t偏移:" + loc.getOffset());
+				System.out.println("\t名称:" + Arrays.toString(loc.getNames()));
+				System.out.println("\t拓扑路径:" + Arrays.toString(loc.getTopologyPaths()));
+				System.out.println("\t有缓存的主机:" + Arrays.toString(loc.getCachedHosts()));
+				System.out.println("\tisCorrupt:" + loc.isCorrupt());
+				System.out.println();
+			}
+			System.out.println("]");
 		}
 	}
 
@@ -136,6 +149,7 @@ public class HadoopTest1 {
 			System.out.println("权限信息: " + fileStatus.getPermission());
 			System.out.println("块位置: " + Arrays.toString(fileStatus.getBlockLocations()));
 		}
+		
 	}
 
 	/**
