@@ -62,11 +62,11 @@ public class WordCount {
 		conf.set(Job.NUM_REDUCES, "1");
 		Job job = Job.getInstance(conf);
 		job.setMapperClass(WordMapper.class);
-		job.setReducerClass(Reducer.class);
+		job.setReducerClass(WordReducer.class);
 		job.setJarByClass(WordCount.class);
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(IntWritable.class);
-		job.setCombinerClass(Reducer.class);
+		job.setCombinerClass(WordReducer.class);
 
 		FileInputFormat.addInputPath(job, new Path(args[0]));
 
