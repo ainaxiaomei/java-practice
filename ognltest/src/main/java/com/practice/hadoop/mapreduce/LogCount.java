@@ -12,6 +12,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat;
@@ -75,12 +76,11 @@ public class LogCount {
 		job.setJobName("logCount");
 
 		job.setInputFormatClass(SequenceFileInputFormat.class);
-		job.setOutputFormatClass(TextOutputFormat.class);
 
 		job.setMapperClass(LoggerMapper.class);
 		job.setReducerClass(LoggerReducer.class);
 
-		SequenceFileInputFormat.setInputPaths(job, new Path("/flume/lmsLogs"));
+		FileInputFormat.setInputPaths(job, new Path("/flume/lmsLogs"));
 		FileOutputFormat.setOutputPath(job, new Path("/flume/lmsLogs/log"));
 		
 		System.out.println(job.getMapOutputKeyClass());
