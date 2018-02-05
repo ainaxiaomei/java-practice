@@ -1,18 +1,21 @@
 package com.practice.hadoop.common;
 
 import java.io.IOException;
+import java.util.List;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
-import org.apache.hadoop.mapred.FileInputFormat;
-import org.apache.hadoop.mapred.FileSplit;
-import org.apache.hadoop.mapred.InputSplit;
-import org.apache.hadoop.mapred.JobConf;
-import org.apache.hadoop.mapred.TextInputFormat;
+import org.apache.hadoop.mapreduce.InputSplit;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.input.FileSplit;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.junit.Before;
 import org.junit.Test;
 
 /**
  * 测试FileInputFormat的getInputSplit如何切分文件
+ * 当一个blk剩余的大小不足以作为一个split的时候，这个split不会跨blk
  * @author Administrator
  *
  */
@@ -31,15 +34,16 @@ public class FileSplitTest {
 	
 	
 	@Test
-	public void fileSplitTest() throws IOException {
+	public void fileSplitTest() throws IOException, InterruptedException {
 		
 		TextInputFormat in = new TextInputFormat();
-		JobConf job = new JobConf();
+		Job job = Job.getInstance();
+		job.getConfiguration().set(FileInputFormat.SPLIT_MAXSIZE, String.valueOf(50 * 1024 * 1024));
 		FileInputFormat.setInputPaths(job, "/text");
-		in.configure(job);
-		InputSplit[] splits = in.getSplits(job, 10);
+		List<InputSplit> splits = in.getSplits(job);
 		
-		System.out.println("一个分成 : " + splits.length + "份");
+		System.out.println("默认记录分割符 : " + job.getConfiguration().get("textinputformat.record.delimiter"));
+		System.out.println("一个分成 : " + splits.size() + "份");
 		for(InputSplit split : splits){
 			System.out.println("[");
 			    FileSplit s = (FileSplit)split;
