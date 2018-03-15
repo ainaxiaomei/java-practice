@@ -38,7 +38,7 @@ public class EurekaInstanceTest {
     	System.out.println("HealthCheckUrlPath : " + instanceConfig.getHealthCheckUrlPath());
     	System.out.println("HomePageUrl : " + instanceConfig.getHomePageUrl());
     	System.out.println("HomePageUrlPath : " + instanceConfig.getHomePageUrlPath());
-    	System.out.println("HostName : " + instanceConfig.getHostName(true));
+    	System.out.println("HostName : "  + instanceConfig.getHostName(true));
     	System.out.println("InstanceId : " + instanceConfig.getInstanceId());
     	System.out.println("IpAddress : " + instanceConfig.getIpAddress());
     	System.out.println("LeaseExpirationDurationInSeconds : " + instanceConfig.getLeaseExpirationDurationInSeconds());

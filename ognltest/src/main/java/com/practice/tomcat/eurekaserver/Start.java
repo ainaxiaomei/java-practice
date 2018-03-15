@@ -19,8 +19,8 @@ public class Start {
 	public static void main(String[] args) throws ServletException, LifecycleException {
 		Tomcat tomcat = new Tomcat();
 		tomcat.setPort(8080);
-		tomcat.getHost().setAppBase("G:\\vergil\\web");
-		Context context = tomcat.addWebapp("/eureka", "G:\\vergil\\web\\eureka.war");
+		tomcat.getHost().setAppBase("D:\\sunqi\\webapp");
+		Context context = tomcat.addWebapp("/eureka", "D:\\sunqi\\webapp\\eureka-server-1.8.7.war");
 		tomcat.start();
 		tomcat.getServer().await();
 
