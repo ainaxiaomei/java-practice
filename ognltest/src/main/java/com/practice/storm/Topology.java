@@ -221,7 +221,6 @@ public class Topology {
 		public void declareOutputFields(OutputFieldsDeclarer declarer) {
 			
 			System.out.println("declareOutputFields");
-			declarer.declare(new Fields("line"));
 			
 		}
 
