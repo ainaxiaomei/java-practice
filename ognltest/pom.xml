@@ -6,7 +6,15 @@
 	<artifactId>ognltest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
+    
+    <profiles>
+      <profile>
+      <id>dev</id>
+      <activation>
+        <jdk>1.8</jdk>
+      </activation>
+    </profile>
+    </profiles>
 	<name>ognltest</name>
 	<url>http://maven.apache.org</url>
 	<parent>
