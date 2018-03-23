@@ -5,17 +5,18 @@ import java.lang.reflect.Field;
 import org.junit.Test;
 
 
-/**
- * 同一个ThreadLocal在不同的线程中的key是不是相同
- * @author win
- *
- */
+
 public class ThreadLocalTest {
 	
 	public static ThreadLocal<String> threadLocal = new ThreadLocal<>();
-
+    
+	/**
+	 * 同一个ThreadLocal在不同的线程中的key是不是相同
+	 * @author win
+	 *
+	 */
 	@Test
-	public void test() throws InterruptedException {
+	public void keyTest() throws InterruptedException {
 		new Thread(()->{
 			
 			System.out.println("-- " + Thread.currentThread().getName() );
@@ -59,5 +60,21 @@ public class ThreadLocalTest {
 		
 		Thread.sleep(5000);
 	}
+	
+	
+	/**
+	 * 同一个Threadlocal在同一个线程里只能有一个值
+	 */
+	@Test
+	public void valueTest() {
+		
+		threadLocal.set("a");
+		threadLocal.set("b");
+		
+		System.out.println(threadLocal.get());
+		
+		
+	}
+	
 
 }
