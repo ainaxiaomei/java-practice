@@ -20,7 +20,7 @@ import org.apache.zookeeper.data.Stat;
 public class ZookeeperTest {
 	public static void main(String[] args) {
 		try {
-			ZooKeeper zk =new ZooKeeper("127.0.0.1:2181",10000,new MyWatch());
+			ZooKeeper zk =new ZooKeeper("192.168.2.3:2181",10000,new MyWatch());
 			MyWatch watch = new MyWatch();
 			if(null == zk.exists("/root", watch)) {
 				zk.create("/root", "123".getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);

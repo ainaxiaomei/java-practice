@@ -38,6 +38,8 @@ public class AvroTest {
 		}
 		
 		dataFileReader.close();
+		
+		
 
 	}
 

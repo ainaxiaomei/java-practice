@@ -25,7 +25,7 @@ public class KafkaTest {
 	@Test
 	public void kafkaProducerTest1() {
 		Properties props = new Properties();
-		props.put("bootstrap.servers", "192.168.5.23:9092");
+		props.put("bootstrap.servers", "192.168.2.3:9092");
 		props.put("acks", "all");
 		props.put("retries", 0);
 		props.put("batch.size", 16384);
@@ -36,7 +36,7 @@ public class KafkaTest {
 
 		Producer<String, String> producer = new KafkaProducer<>(props);
 		for (int i = 0; i < 100; i++)
-			producer.send(new ProducerRecord<String, String>("sunqi", "sunqi" + Integer.toString(i),
+			producer.send(new ProducerRecord<String, String>("probe", "sunqi" + Integer.toString(i),
 					"sunqi" + Integer.toString(i)));
 
 		producer.close();
