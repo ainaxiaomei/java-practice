@@ -1,38 +1,30 @@
 package com.practice.spring.aop;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
 
 public class Start {
 	
 	private AnnotationConfigApplicationContext context;
 	
-    @Before
-    public void init(){
+	@Before
+	public void init() {
 		context = new AnnotationConfigApplicationContext("com.practice.spring.aop");
+	}
 
-    }
-    
-    /**
-     * 没有配置任何advice pointcut的bean是一个纯洁的bean
-     */
+	
+	/**
+	 * 如果没有符合的advise,创建的bean是一个纯对象没有被代理
+	 */
 	@Test
 	public void test() {
-		IBar bar = context.getBean("unproxy",IBar.class);
-		System.out.println(bar.getClass());
-		assertTrue("ERROR", bar.getClass() == Bar.class);
-	}
-	
-	
-	@Test
-	public void test2() {
 		IFoo foo = context.getBean(IFoo.class);
-		foo.doBusiness(1000);
+		foo.foo();
+		System.out.println(foo.getClass());
+		
+		GenericApplicationContext con = new GenericApplicationContext();
 	}
-	
-	
 
 }
