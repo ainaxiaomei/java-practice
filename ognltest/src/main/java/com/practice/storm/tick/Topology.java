@@ -28,6 +28,7 @@ public class Topology {
 		LocalCluster cluster = new LocalCluster();
 		
 		Config config = new Config();
+		config.put(Config.TOPOLOGY_TICK_TUPLE_FREQ_SECS, 10);
 		cluster.submitTopology("tick", config, topology);
 		
 	}

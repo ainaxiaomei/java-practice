@@ -25,7 +25,7 @@ public class TickSpout extends BaseRichSpout {
 	@Override
 	public void nextTuple() {
 
-		String[] src = new String[] {"Abc","about","bce","dsf","sfds","hello","abey"};
+		String[] src = new String[] {"111","222","333","444","555","666","777"};
 	    int index = ran.nextInt(100)%src.length;
 	    
 	    collector.emit(new Values(src[index]));
