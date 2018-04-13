@@ -5,7 +5,7 @@
 	<dubbo:application name="demo-provider" version="1.0" />
 	<dubbo:registry address="multicast://224.1.1.1:9090" />
 	<dubbo:protocol name="dubbo" port="20880" />
-	<bean id="greetingsService" class="com.practice.dubbo.provider.GreetingServiceImpl" />
-	<dubbo:service interface="com.practice.dubbo.provider.GreetingService"
+	<bean id="greetingsService" class="com.practice.dubbo.muticast.provider.GreetingServiceImpl" />
+	<dubbo:service interface="com.practice.dubbo.muticast.provider.GreetingService"
 		ref="greetingsService" />
 </beans> 
