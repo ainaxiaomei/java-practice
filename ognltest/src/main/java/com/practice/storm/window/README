@@ -5,4 +5,5 @@ storm自带的WindowBolt
 	private final List<Tuple> tuples;
     private final List<Tuple> newTuples;
     private final List<Tuple> expiredTuples;
-3.WindowBolt的ack机制
+3.WindowBolt的发出的bolt会自动锚定,自动ack。
+4.windwo bolt的三个list，当前的list固定为窗口大小,超时的list为本次淘汰的tuple,先来的list为本次到来的tuple

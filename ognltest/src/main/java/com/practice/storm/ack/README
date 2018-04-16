@@ -1,3 +1,5 @@
 storm的ack与锚定机制
 1.tuple如果不ack会重发,tuple从一个bolt到下一bolt需要锚定。
 如果不锚定，tuple的追踪到此结束，下一个bolt的ack不会触发spout的ack方法
+2.如果spout发出的tupue没有mesageid,tuple不会被追踪
+3.发送一个tuple由三要素，(msgid,stramid,value)

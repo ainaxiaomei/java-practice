@@ -2,6 +2,7 @@ package com.practice.storm.window;
 
 import java.util.Map;
 import java.util.Random;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.storm.spout.SpoutOutputCollector;
@@ -17,7 +18,7 @@ import org.apache.storm.tuple.Values;
  * @author win
  *
  */
-public class RandomSpout extends BaseRichSpout {
+public class TimeSpout extends BaseRichSpout {
 	
 	/**
 	 * 
@@ -34,14 +35,14 @@ public class RandomSpout extends BaseRichSpout {
 
 	@Override
 	public void nextTuple() {
-		String[] src = new String[] {"111","222","333","444","555","666","777"};
-	    int index = ran.nextInt(100)%src.length;
+	    
+	    String id = UUID.randomUUID().toString();
 	    try {
 			TimeUnit.SECONDS.sleep(1);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		};
-	    collector.emit(new Values(src[index]));
+	    collector.emit(new Values(String.valueOf(System.currentTimeMillis())),id);
 
 	}
 
@@ -49,5 +50,16 @@ public class RandomSpout extends BaseRichSpout {
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {
 		declarer.declare(new Fields("window"));
 	}
+
+	/**
+	 * 测试windowbolt是否自动锚定
+	 */
+	@Override
+	public void ack(Object msgId) {
+		
+		System.out.println("-- acked : " + msgId);
+	}
+	
+	
 
 }

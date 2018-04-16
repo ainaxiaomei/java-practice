@@ -11,11 +11,11 @@ public class Topology {
 	public static void main(String[] args) {
 		
 		TopologyBuilder builder = new TopologyBuilder();
-		builder.setSpout("winSpout", new RandomSpout());
+		builder.setSpout("winSpout", new TimeSpout());
 		builder.setBolt("win-bolt", new SliderWindowBolt()
 				.withWindow(Duration.seconds(10), Duration.seconds(3)))
-		.shuffleGrouping("winSpout");
-		
+				.shuffleGrouping("winSpout");
+		builder.setBolt("res-bolt", new ResultBolt()).globalGrouping("win-bolt");
 		StormTopology topology = builder.createTopology();
 		
 		Config conf = new Config();
