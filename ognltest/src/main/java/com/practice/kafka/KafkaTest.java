@@ -4,17 +4,23 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.PartitionInfo;
+import org.apache.kafka.common.serialization.StringSerializer;
+import org.apache.storm.kafka.KafkaConfig;
 import org.junit.Test;
 
 public class KafkaTest {
@@ -44,7 +50,7 @@ public class KafkaTest {
 	}
 
 	/**
-	 * 使用自定义partition
+	 * 使用ProducerRecord指定partion
 	 */
 	@Test
 	public void kafkaProducerTest2() {
@@ -65,6 +71,62 @@ public class KafkaTest {
 
 		producer.close();
 
+	}
+	
+	
+	/**
+	 * kafka异步发送，发送结束后调用回调函数
+	 */
+	@Test
+	public void kafkaAsyncSendTest() {
+		
+		Properties prop = new Properties();
+		prop.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.9.200:9092");
+		prop.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,"org.apache.kafka.common.serialization.StringSerializer");
+		prop.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,"org.apache.kafka.common.serialization.StringSerializer");
+		
+		
+		KafkaProducer<String, String> producer = new KafkaProducer<>(prop);
+		ProducerRecord<String, String> record = new ProducerRecord<>("sunqi","test","sunqi123");
+		producer.send(record,new Callback() {
+			
+			@Override
+			public void onCompletion(RecordMetadata metadata, Exception exception) {
+				if(exception != null) {
+					exception.printStackTrace();
+				}else {
+					System.out.println("hasOffset :" + metadata.hasOffset());
+					System.out.println("partition :" + metadata.partition());
+					System.out.println("timestamp :" + metadata.timestamp());
+					System.out.println("topic :" + metadata.topic());
+				}
+			}
+		});
+		
+	}
+	
+	/**
+	 * 同步发送测试，发送完返回一个future,并在future上等待
+	 * @throws ExecutionException 
+	 * @throws InterruptedException 
+	 */
+	@Test
+	public void kafkaSyncSendTest() throws InterruptedException, ExecutionException {
+		Properties props = new Properties();
+		props.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.9.200:9092");
+		props.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+		props.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+		props.setProperty(ProducerConfig.ACKS_CONFIG, "1");
+		props.setProperty(ProducerConfig.RETRIES_CONFIG, "4");
+		
+		KafkaProducer<String, String> kafka = new KafkaProducer<>(props);
+		Future<RecordMetadata> fu =kafka.send(new ProducerRecord<String, String>("sunqi", "sync-sunqi"));
+		RecordMetadata metadata = fu.get();
+		
+		System.out.println("hasOffset :" + metadata.hasOffset());
+		System.out.println("partition :" + metadata.partition());
+		System.out.println("timestamp :" + metadata.timestamp());
+		System.out.println("topic :" + metadata.topic());
 	}
 
 	/**
