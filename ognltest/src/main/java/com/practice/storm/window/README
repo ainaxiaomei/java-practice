@@ -1,0 +1,8 @@
+storm自带的WindowBolt
+1.window可以基于时间也可以基于数量，window分为window长度和windwo计算间隔
+2.IWinowBolt的execute参数不是Tuple是TupleWindow,TupleWindow中存储了。当前的，新到的，过期的tuple
+最终是把配置传递给IComponent的实现getComponentConfiguration。有点类似storm的tick机制
+	private final List<Tuple> tuples;
+    private final List<Tuple> newTuples;
+    private final List<Tuple> expiredTuples;
+3.WindowBolt的ack机制
