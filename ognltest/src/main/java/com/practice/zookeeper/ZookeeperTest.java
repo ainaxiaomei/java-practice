@@ -27,7 +27,6 @@ public class ZookeeperTest {
 
 			}
 			
-		
 			zk.create("/root/leader", "a".getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
 			zk.create("/root/leader", "a".getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
 			System.out.println(zk.getSessionId());
