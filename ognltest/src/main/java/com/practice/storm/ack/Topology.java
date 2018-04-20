@@ -20,9 +20,6 @@ public class Topology {
 		
 		cluster.submitTopology("fail", new Config(), topology);
 		
-		Thread.sleep(5000);
-		//手动关闭
-		cluster.shutdown();
 	}
 	
 

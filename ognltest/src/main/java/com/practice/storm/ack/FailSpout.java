@@ -41,6 +41,7 @@ public class FailSpout extends BaseRichSpout{
 		String str = String.valueOf(random.nextInt(100));
 		String id = UUID.randomUUID().toString();
 		System.out.println("-- "+this.getClass().getName() +  " nextTuple -->" + id);
+		
 		collector.emit(new Values(str),id);
 		while(true) {}
 		

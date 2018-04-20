@@ -11,5 +11,13 @@
     *  parallelism_hint设置executor的数量， setNumTasks设置执行任务的数量executor <= tasks
     *  如果设置了parallelism_hint为4同时设置了setNumTasks为1只会有一个task
     
+* 改变运行中的worker和executor数量
+    *  web UI
+    *  使用命令行 $ storm rebalance mytopology -n 5 -e blue-spout=3 -e yellow-bolt=10
+    
+    
+    
+  
+    
     
 

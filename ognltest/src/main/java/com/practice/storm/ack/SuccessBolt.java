@@ -17,6 +17,8 @@ public class SuccessBolt extends BaseRichBolt  {
 	 */
 	private static final long serialVersionUID = 1L;
 	private OutputCollector collector;
+	
+	private TopologyContext context;
 
 	@Override
 	public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
