@@ -2,6 +2,7 @@ package com.practice.storm.tick;
 
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.storm.spout.SpoutOutputCollector;
 import org.apache.storm.task.TopologyContext;
@@ -27,7 +28,11 @@ public class TickSpout extends BaseRichSpout {
 
 		String[] src = new String[] {"111","222","333","444","555","666","777"};
 	    int index = ran.nextInt(100)%src.length;
-	    
+	    try {
+			TimeUnit.SECONDS.sleep(1);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	    collector.emit(new Values(src[index]));
 	}
 

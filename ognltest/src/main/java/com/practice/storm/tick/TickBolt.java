@@ -29,9 +29,9 @@ public class TickBolt extends BaseRichBolt{
 	@Override
 	public void execute(Tuple input) {
 		if(TupleUtils.isTick(input)) {
-			System.out.println("-- from tick : " + System.currentTimeMillis());
+			System.out.println("-- tick tuple: " + System.currentTimeMillis());
 		}else {
-			System.out.println(input.getValueByField("tick"));
+			System.out.println("-- regular tuple: " + input.getValueByField("tick"));
 			collector.ack(input);
 		}
 	}

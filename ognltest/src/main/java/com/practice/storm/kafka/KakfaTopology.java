@@ -18,7 +18,7 @@ public class KakfaTopology {
 		
 		TopologyBuilder builder = new TopologyBuilder();
 		
-		ZkHosts zkhosts = new ZkHosts("");
+		ZkHosts zkhosts = new ZkHosts("192.168.2.3:2181");
 		SpoutConfig spoutConf = new SpoutConfig(zkhosts,"probe","/probe", UUID.randomUUID().toString());
 		KafkaSpout kafkaSpout = new KafkaSpout(spoutConf);
 		builder.setSpout("kafkaSpout", kafkaSpout);
