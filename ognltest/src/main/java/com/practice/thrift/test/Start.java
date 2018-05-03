@@ -1,7 +1,5 @@
 package com.practice.thrift.test;
 
-import javax.swing.plaf.multi.MultiPanelUI;
-
 import org.apache.thrift.TException;
 import org.apache.thrift.TMultiplexedProcessor;
 import org.apache.thrift.protocol.TBinaryProtocol;
