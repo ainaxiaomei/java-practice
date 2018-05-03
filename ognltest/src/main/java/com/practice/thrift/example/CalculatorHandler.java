@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.practice.thrift;
+package com.practice.thrift.example;
 import org.apache.thrift.TException;
 
 // Generated code

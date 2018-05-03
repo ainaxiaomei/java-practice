@@ -1,4 +1,4 @@
-package com.practice.thrift;
+package com.practice.thrift.example;
 
 import org.apache.thrift.server.TServer;
 import org.apache.thrift.server.TServer.Args;
