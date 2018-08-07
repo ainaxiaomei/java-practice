@@ -65,21 +65,20 @@ public class JeseryClientTest1 {
 	 */
 	@Test
 	public void HttpsUrlConnectionTest() throws MalformedURLException, IOException {
-		
 		Properties props = System.getProperties();
 		props.setProperty("https.proxyHost", "localhost");
 		props.setProperty("https.proxyPort", "8888");
 		System.setProperties(props);
 		
-		System.setProperty("java.protocol.handler.pkgs",  "com.sun.net.ssl.internal.www.protocol");
+		//System.setProperty("java.protocol.handler.pkgs",  "com.sun.net.ssl.internal.www.protocol");
 
-	    System.setProperty("java.protocol.handler.pkgs",  "com.ibm.net.ssl.internal.www.protocol");
+	    //System.setProperty("java.protocol.handler.pkgs",  "com.ibm.net.ssl.internal.www.protocol");
 
 		String trustStorePath = "D:\\Program Files\\Java\\jdk1.8.0_162\\jre\\lib\\security\\mytruststore";
 	
 		System.setProperty("javax.net.ssl.trustStore",  trustStorePath);
 	
-		System.setProperty("javax.net.ssl.trustStorePassword",  "123456");
+		System.setProperty("javax.net.ssl.trustStorePassword",  "changeit");
 		
 		HttpURLConnection http = (HttpURLConnection) new URL("https://www.baidu.com?name=123").openConnection();
 		InputStream in = http.getInputStream();
@@ -91,5 +90,6 @@ public class JeseryClientTest1 {
 		}
 		
 	}
+	
 
 }
