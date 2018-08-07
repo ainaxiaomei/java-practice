@@ -19,15 +19,27 @@ import org.glassfish.jersey.client.ClientProperties;
 import org.junit.Test;
 
 public class JeseryClientTest1 {
-
+    
+	/**
+	 * 
+	    * @Title: test  
+	    * @Description: 只有ApacheConnectorProvider 和 JettyConnectorProvider支持ClientConfig设置代理
+	    * @param     参数  
+	    * @return void    返回类型  
+	    * @throws
+	 */
 	@Test
-	public void test() {
+	public void JersyProxyTest() {
+		
 		ClientConfig config = new ClientConfig();
-		config.property(ClientProperties.PROXY_URI, "http://0.0.0.0:8888");
+		config.property(ClientProperties.PROXY_URI, "http://localhost:8888");
 		Client client = ClientBuilder.newClient(config);
+		config = (ClientConfig) client.getConfiguration();
+		System.out.println("ConnectorProvider : " + config.getConnectorProvider());
+		System.out.println("jersey.config.client.proxy.uri : " + config.getProperty(ClientProperties.PROXY_URI));
 		WebTarget webTarget = client.target("http://www.baidu.com");
 		String res = webTarget.request().get(String.class);
-		System.out.println(res);
+		//System.out.println(res);
 
 	}
 
@@ -57,7 +69,7 @@ public class JeseryClientTest1 {
 	/**
 	 * 
 	 * @Title: HttpUrlConnectionTest  
-	 * @Description: HTTPS代理即使代理不存在也能使用
+	 * @Description: HTTPS代理即使代理不存在也能使用,jdk密钥库默认的密码是changeit
 	 * @param @throws MalformedURLException
 	 * @param @throws IOException    参数  
 	 * @return void    返回类型  
