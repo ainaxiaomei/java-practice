@@ -14,8 +14,10 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 
+import org.glassfish.jersey.SslConfigurator;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.client.ClientProperties;
+import org.glassfish.jersey.netty.connector.NettyConnectorProvider;
 import org.junit.Test;
 
 public class JeseryClientTest1 {
@@ -42,6 +44,67 @@ public class JeseryClientTest1 {
 		//System.out.println(res);
 
 	}
+	
+	/**
+	 * 
+	    * @Title: JerseyNettyConnectorTest  
+	    * @Description: NettyConnectorProvider设置HTTP代理
+	    * @param     参数  
+	    * @return void    返回类型  
+	    * @throws
+	 */
+	@Test
+	public void httpJerseyNettyConnectorTest() {
+		
+		ClientConfig config = new ClientConfig();
+		config.property(ClientProperties.PROXY_URI, "http://localhost:8888");
+		config.property(ClientProperties.PROXY_USERNAME, "123");
+		config.property(ClientProperties.PROXY_PASSWORD, "123");
+		config.connectorProvider(new NettyConnectorProvider());
+		Client client = ClientBuilder.newClient(config);
+		config = (ClientConfig) client.getConfiguration();
+		System.out.println("ConnectorProvider : " + config.getConnectorProvider());
+		System.out.println("jersey.config.client.proxy.uri : " + config.getProperty(ClientProperties.PROXY_URI));
+		WebTarget webTarget = client.target("http://www.open-open.com/lib/view/open1328069889514.html");
+		String res = webTarget.request().get(String.class);
+		System.out.println(res);
+
+	}
+	
+	
+	/**
+	 * 
+	    * @Title: httpsJerseyNettyConnectorTest  
+	    * @Description: jersy设置https代理 
+	    * @param     参数  
+	    * @return void    返回类型  
+	    * @throws
+	 */
+	@Test
+	public void httpsJerseyNettyConnectorTest() {
+		
+		String path = Thread.currentThread().getContextClassLoader().getResource("mytruststore").getPath();
+		
+		System.out.println(path);
+		SslConfigurator sslConfig = SslConfigurator.newInstance()
+		        .trustStoreFile(path)
+		        .trustStorePassword("changeit");
+		 
+		SSLContext sslContext = sslConfig.createSSLContext();
+		
+		ClientConfig config = new ClientConfig();
+		config.property(ClientProperties.PROXY_URI, "http://localhost:8888");
+		config.property(ClientProperties.PROXY_USERNAME, "");
+		config.property(ClientProperties.PROXY_PASSWORD, "");
+		config.connectorProvider(new NettyConnectorProvider());
+		
+		Client client = ClientBuilder.newBuilder().withConfig(config).sslContext(sslContext).build();
+		
+		WebTarget webTarget = client.target("https://www.baidu.com");
+		String res = webTarget.request().get(String.class);
+		System.out.println(res);
+		
+	}
 
 	/**
 	 * 
@@ -50,12 +113,13 @@ public class JeseryClientTest1 {
 	 */
 	@Test
 	public void HttpUrlConnectionTest() throws MalformedURLException, IOException {
+		
 		Properties props = System.getProperties();
 		props.setProperty("http.proxyHost", "localhost");
 		props.setProperty("http.proxyPort", "8888");
 		System.setProperties(props);
-
-		HttpURLConnection http = (HttpURLConnection) new URL("http://www.baidu.com").openConnection();
+ 
+		HttpURLConnection http = (HttpURLConnection) new URL("http://www.open-open.com/lib/view/open1328069889514.html").openConnection();
 		InputStream in = http.getInputStream();
 
 		BufferedReader bf = new BufferedReader(new InputStreamReader(in));
@@ -82,14 +146,8 @@ public class JeseryClientTest1 {
 		props.setProperty("https.proxyPort", "8888");
 		System.setProperties(props);
 		
-		//System.setProperty("java.protocol.handler.pkgs",  "com.sun.net.ssl.internal.www.protocol");
-
-	    //System.setProperty("java.protocol.handler.pkgs",  "com.ibm.net.ssl.internal.www.protocol");
-
-		String trustStorePath = "D:\\Program Files\\Java\\jdk1.8.0_162\\jre\\lib\\security\\mytruststore";
-	
+		String trustStorePath = Thread.currentThread().getContextClassLoader().getResource("mytruststore").getPath();
 		System.setProperty("javax.net.ssl.trustStore",  trustStorePath);
-	
 		System.setProperty("javax.net.ssl.trustStorePassword",  "changeit");
 		
 		HttpURLConnection http = (HttpURLConnection) new URL("https://www.baidu.com?name=123").openConnection();
