@@ -1,4 +1,4 @@
-package com.practice.netty;
+package com.practice.netty.channelhadnler;
 
 import java.util.Date;
 

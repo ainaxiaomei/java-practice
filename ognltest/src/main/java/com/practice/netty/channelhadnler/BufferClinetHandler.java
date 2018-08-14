@@ -1,4 +1,4 @@
-package com.practice.netty;
+package com.practice.netty.channelhadnler;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
