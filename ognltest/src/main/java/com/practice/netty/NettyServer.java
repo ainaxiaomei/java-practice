@@ -1,6 +1,6 @@
 package com.practice.netty;
 
-import java.net.InetSocketAddress;
+import java.net.InetSocketAddress;import org.apache.commons.collections.bag.SynchronizedSortedBag;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
@@ -35,6 +35,7 @@ public class NettyServer {
 					@Override
 					public void channelActive(ChannelHandlerContext ctx) throws Exception {
 						
+						System.out.println(this.hashCode());
 						System.out.println(" ---  connected : address - " + ctx.channel().remoteAddress());
 					}
 
