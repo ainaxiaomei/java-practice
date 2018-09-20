@@ -1,83 +1,73 @@
 package com.practice.netty;
 
-import java.net.InetSocketAddress;import org.apache.commons.collections.bag.SynchronizedSortedBag;
+
+import java.net.InetSocketAddress;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
-import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.util.ReferenceCountUtil;
 
 public class NettyServer {
-	public static void main(String[] args) {
+	
+	public static void main(String[] args) throws InterruptedException {
 		
 		ServerBootstrap boot = new ServerBootstrap();
-		
-		EventLoopGroup parentGroup = new NioEventLoopGroup();
-		EventLoopGroup childGroup = new NioEventLoopGroup();
-		
-		
-		boot
-		.group(parentGroup, childGroup)
-		.channel(NioServerSocketChannel.class)
-		.childHandler(new ChannelInitializer<Channel>() {
+		EventLoopGroup boss = new NioEventLoopGroup();
+		EventLoopGroup worker = new NioEventLoopGroup();
+		boot.group(boss,worker)
+		    .channel(NioServerSocketChannel.class)
+		    .childHandler(new ChannelInitializer<SocketChannel>() {
 
-			@Override
-			protected void initChannel(Channel ch) throws Exception {
-				ch.pipeline().addLast(new ChannelInboundHandlerAdapter() {
+				@Override
+				protected void initChannel(SocketChannel ch) throws Exception {
+					
+					ch.pipeline().addLast(new ChannelInboundHandlerAdapter() {
 
-					@Override
-					public void channelActive(ChannelHandlerContext ctx) throws Exception {
-						
-						System.out.println(this.hashCode());
-						System.out.println(" ---  connected : address - " + ctx.channel().remoteAddress());
-					}
-
-					@Override
-					public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-						
-						try {
-							ByteBuf buf = (ByteBuf)msg;
-							String str = buf.toString(io.netty.util.CharsetUtil.US_ASCII);
-							System.out.println(" --- read : " + new String(str));
+						@Override
+						public void channelActive(ChannelHandlerContext ctx) throws Exception {
 							
-							ByteBuf out = ctx.alloc().buffer();
+							System.out.println("--- connected !");
+						}
+
+						@Override
+						public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 							
-							out.writeBytes("--- received ".getBytes());
-							ctx.writeAndFlush(out);
-						} finally {
-							ReferenceCountUtil.release(msg);
+							ByteBuf response = ctx.alloc().buffer();
+							byte[] header = new byte[2];
+							byte[] data = new byte[127];
+							
+							data = "bao zi bu chi rou !".getBytes();
+							
+							header[0] = 1;
+							header[1] = (byte) data.length;
+							System.out.println(header[1]);
+							response.writeBytes(header);
+							response.writeBytes(data);
+							ctx.writeAndFlush(response);
+							ctx.close();
+						}
+
+						@Override
+						public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+							cause.printStackTrace();
+							System.out.println("--- error !");
 						}
 						
-					}
-
-					@Override
-					public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-						cause.printStackTrace();
-						ctx.close();
-					}
+						
+						
+					});
 					
-					
-					
-				});
-				
-			}
-		});
+				}
+			})
+		    .bind(new InetSocketAddress("0.0.0.0", 9999)).sync();
 		
-		try {
-			ChannelFuture future = boot.bind(new InetSocketAddress("0.0.0.0", 8585)).sync();
-			future.channel().closeFuture().sync();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}finally {
-			parentGroup.shutdownGracefully();
-			childGroup.shutdownGracefully();
-		}
 	}
+
 }

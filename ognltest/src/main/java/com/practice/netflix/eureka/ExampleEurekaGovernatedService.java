@@ -1,4 +1,4 @@
-package com.practice.eureka;
+package com.practice.netflix.eureka;
 
 import com.google.inject.AbstractModule;
 import com.netflix.appinfo.EurekaInstanceConfig;

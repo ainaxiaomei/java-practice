@@ -1,4 +1,4 @@
-package com.practice.eureka;
+package com.practice.netflix.eureka;
 import com.netflix.appinfo.ApplicationInfoManager;
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.config.DynamicPropertyFactory;

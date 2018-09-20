@@ -1,4 +1,4 @@
-package com.practice.eureka;
+package com.practice.netflix.eureka;
 
 import java.io.IOException;
 import java.io.OutputStream;

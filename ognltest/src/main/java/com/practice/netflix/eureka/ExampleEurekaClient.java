@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package com.practice.eureka;
+package com.practice.netflix.eureka;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.practice.eureka;
+package com.practice.netflix.eureka;
 import com.netflix.appinfo.EurekaInstanceConfig;
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.appinfo.InstanceInfo.InstanceStatus;
