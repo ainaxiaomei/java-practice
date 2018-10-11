@@ -1,11 +1,8 @@
-package com.practice.netty;
-
+package com.practice.netty.protocol;
 
 import java.net.InetSocketAddress;
 
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.buffer.ByteBuf;
-import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.ChannelInitializer;
@@ -14,66 +11,54 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
-public class NettyServer {
+public class ProtocolServer {
 	
 	public static void main(String[] args) throws InterruptedException {
 		
 		ServerBootstrap boot = new ServerBootstrap();
+		
 		EventLoopGroup boss = new NioEventLoopGroup();
 		EventLoopGroup worker = new NioEventLoopGroup();
-		boot.group(boss,worker)
+		
+		boot.group(boss, worker)
 		    .channel(NioServerSocketChannel.class)
 		    .childHandler(new ChannelInitializer<SocketChannel>() {
 
 				@Override
 				protected void initChannel(SocketChannel ch) throws Exception {
-					
+					ch.pipeline().addLast(new Decoder());
+					ch.pipeline().addLast(new Encoder());
 					ch.pipeline().addLast(new ChannelInboundHandlerAdapter() {
 
 						@Override
 						public void channelActive(ChannelHandlerContext ctx) throws Exception {
 							
-							System.out.println("--- connected !");
+							System.out.println(" --- connected !");
 						}
 
 						@Override
 						public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 							
-							ByteBuf request = (ByteBuf)msg;
-							int len = request.readableBytes();
-							byte[] b = new byte[len];
-							request.readBytes(b);
-							System.out.println("--- receive " + new String(b));
+							String data = (String)msg;
+							System.out.println(" --- receive : " + data);
 							
-							ByteBuf response = ctx.alloc().buffer();
-							byte[] header = new byte[2];
-							byte[] data = new byte[127];
-							
-							data = "bao zi bu chi rou !".getBytes();
-							
-							header[0] = 1;
-							header[1] = (byte) data.length;
-							System.out.println(header[1]);
-							response.writeBytes(header);
-							response.writeBytes(data);
-							ctx.writeAndFlush(response);
-							ctx.close();
+							ctx.writeAndFlush("hello");
 						}
 
 						@Override
 						public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
 							cause.printStackTrace();
-							System.out.println("--- error !");
+							System.out.println("error");
 						}
-						
-						
 						
 					});
 					
 				}
 			})
-		    .bind(new InetSocketAddress("0.0.0.0", 9999)).sync();
-		
+		    .bind(new InetSocketAddress("0.0.0.0", 9999))
+		    .sync();
 	}
+	
+	
 
 }

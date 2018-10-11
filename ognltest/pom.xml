@@ -35,6 +35,17 @@
 			<version>1.0.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.elasticsearch.client</groupId>
+			<artifactId>elasticsearch-rest-high-level-client</artifactId>
+			<version>6.4.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>4.1.30.Final</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.apache.storm</groupId>
@@ -45,6 +56,10 @@
 				<exclusion>
 					<groupId>javax.servlet</groupId>
 					<artifactId>servlet-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>log4j-slf4j-impl</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
@@ -197,12 +212,7 @@
 			<artifactId>jersey-container-servlet</artifactId>
 			<version>2.26-b03</version>
 		</dependency>
-		<dependency>
-			<groupId>io.netty</groupId>
-			<artifactId>netty-all</artifactId> <!-- Use 'netty-all' for 4.0 or above -->
-			<version>4.1.11.Final</version>
-			<scope>compile</scope>
-		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
