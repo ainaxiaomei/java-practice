@@ -1,4 +1,4 @@
-package com.practice.java.lock;
+package com.practice.java.concurrent.lock;
 
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
