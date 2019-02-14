@@ -21,81 +21,32 @@ import org.mortbay.log.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * 根据日志统计客户端的访问ip数
+ * 日志格式
+114.124.137.92 - - [12/Jan/2019:01:27:37 +0800] "GET http://cycdnml.yuanzhanapp.com/res_version/349.2/53_sniper_attack_zidan_diaoluo_skin02_add.zip?29772065b4183d26c5598d296c7fa2bd" 200 0.797 - 3267 "-" "-" "-" "[0779e641]" "HIT" "180.250.81.4" 0.000796 4099.12
+114.124.175.52 - - [12/Jan/2019:01:27:37 +0800] "GET http://cycdnml.yuanzhanapp.com/res_version/349.2/hero_shikongjianhao_skin01_high_add.zip?f65dd90aab9afe8b21fefd2d1eb21152" 200 10.903 - 574310 "-" "-" "-" "[0779feb4]" "HIT" "180.250.81.4" 0.001073 52674.5
+115.178.206.34 - - [12/Jan/2019:01:27:37 +0800] "GET http://cycdnml.yuanzhanapp.com/res_version/349.2/54_mechwarrior_damage_skin02_add.zip?3b25ec4f30d0bb45815eb1faf117905a" 200 0.882 - 9253 "-" "-" "-" "[0779f27e]" "HIT" "180.250.81.4" 0.000881 10490.9
+
+ * @author vergil
+ *
+ */
 public class LogCount {
 
 	private static Logger logger = LoggerFactory.getLogger(LogCount.class);
-
-	static class LoggerMapper extends Mapper<Object, BytesWritable, LongWritable, Text> {
-
-		private static Logger logger = LoggerFactory.getLogger(LoggerMapper.class);
-
-		@Override
-		protected void map(Object key, BytesWritable value,
-				Mapper<Object, BytesWritable, LongWritable, Text>.Context context)
-				throws IOException, InterruptedException {
-			Log.info("-------------------");
-			logger.info("key is : {}", key);
-			logger.info("value is : {}", value);
-			Log.info("-------------------");
-
-			StringTokenizer token = new StringTokenizer(new String(value.getBytes()));
-			while (token.hasMoreTokens()) {
-				String val = token.nextToken();
-				if ("INFO".equals(val)) {
-					//context.write(new LongWritable(1), new IntWritable(1));
-				}
-			}
-		}
-
-	}
-
-	static class LoggerReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
-
-		@Override
-		protected void reduce(Text key, Iterable<IntWritable> value,
-				Reducer<Text, IntWritable, Text, IntWritable>.Context context)
-				throws IOException, InterruptedException {
-
-			int sum = 0;
-			Iterator<IntWritable> itr = value.iterator();
-			while (itr.hasNext()) {
-				IntWritable val = itr.next();
-				sum = sum + val.get();
-			}
-
-			context.write(key, new IntWritable(sum));
-
-		}
-
-	}
-
-	public static void main(String[] args) throws ClassNotFoundException, IOException, InterruptedException {
-		Job job = Job.getInstance();
-		job.setJarByClass(LoggerMapper.class);
-
-		job.setJobName("logCount");
-
-		job.setInputFormatClass(SequenceFileInputFormat.class);
-
-		job.setMapperClass(LoggerMapper.class);
-		job.setReducerClass(LoggerReducer.class);
-
-		FileInputFormat.setInputPaths(job, new Path("/flume/lmsLogs"));
-		FileOutputFormat.setOutputPath(job, new Path("/flume/lmsLogs/log"));
+	
+	public static void main(String[] args) {
 		
-		System.out.println(job.getMapOutputKeyClass());
-		System.out.println(job.getMapOutputValueClass());
-		System.out.println(job.getOutputKeyClass());
-		System.out.println(job.getOutputValueClass());
-		logger.info("mapper key类型{}", job.getMapOutputKeyClass());
-		logger.info("mapper value类型{}", job.getMapOutputValueClass());
+	}
+}
 
-		logger.info("输出key类型{}", job.getOutputKeyClass());
-		logger.info("输出value类型{}", job.getOutputValueClass());
+class LogMapper extends Mapper<Text, Text, Text, Text>{
+
+	@Override
+	protected void map(Text key, Text value, Mapper<Text, Text, Text, Text>.Context context)
+			throws IOException, InterruptedException {
 		
 		
-		job.waitForCompletion(true);
-
 	}
-
+	
 }

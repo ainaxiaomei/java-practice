@@ -10,7 +10,7 @@ import org.redisson.config.Config;
 import org.redisson.config.SingleServerConfig;
 import org.redisson.config.TransportMode;
 
-public class RedissionTest {
+public class RedissionTest1 {
 
 	public static void main(String[] args) throws InterruptedException {
 		Config config = new Config();
@@ -24,11 +24,11 @@ public class RedissionTest {
 		RLock lock = redisson.getLock("mylock");
 		lock.lock();
 		
-		System.out.println("RedissionTest get lock !");
+		System.out.println("RedissionTest1 get lock !");
 		TimeUnit.SECONDS.sleep(20);
 		
 		lock.unlock();
-		System.out.println("RedissionTest release lock !");
+		System.out.println("RedissionTest1 release lock !");
 		
 
 	}
