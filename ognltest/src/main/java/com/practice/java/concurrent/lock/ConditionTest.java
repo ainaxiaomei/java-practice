@@ -24,8 +24,9 @@ public class ConditionTest {
 		}
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		ConditionTest t =new ConditionTest();
+		t.wait();
 		new Thread(()->{
 			t.Test();
 		}).start();
