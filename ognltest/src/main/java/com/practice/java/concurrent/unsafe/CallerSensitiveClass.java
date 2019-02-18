@@ -7,8 +7,10 @@ public class CallerSensitiveClass {
 	@sun.reflect.CallerSensitive
 	public void callerSensitiveMethod() {
 		
-		Reflection.getCallerClass();
-		System.out.println("111");
+		
+		Class CallerClass = Reflection.getCallerClass();
+		System.out.println("caller class is ：" + CallerClass);
+		System.out.println("caller classloader is  ：" + CallerClass.getClassLoader());
 		
 	}
 
