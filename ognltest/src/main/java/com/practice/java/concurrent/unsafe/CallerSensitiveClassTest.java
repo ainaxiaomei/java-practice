@@ -12,7 +12,7 @@ public class CallerSensitiveClassTest implements Caller{
 	
 	
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
-//		System.setProperty("java.ext.dirs", "F:/app;$JAVA_HOME/jre/lib/ext");
+//		System.setProperty("java.ext.dirs", "E:/workspace/java-practice/ognltest/target/classes;$JAVA_HOME/jre/lib/ext");
 //		ClassLoader extClassLoader = Thread.currentThread().getContextClassLoader().getParent();
 //		Class c = extClassLoader.loadClass("com.practice.java.concurrent.unsafe.CallerSensitiveClass");
 //		CallerSensitiveClass test  = (CallerSensitiveClass) c.getConstructor().newInstance();
@@ -20,16 +20,16 @@ public class CallerSensitiveClassTest implements Caller{
 		
 		
 		//通过正常对象调用Reflection.getCallerClass()
-		System.out.println(CallerSensitiveClassTest.class.getClassLoader());
-		CallerSensitiveClass test = new CallerSensitiveClass();
-		//test.callerSensitiveMethod();
-		
-		//通过双重反射方式调用
-		
-		Caller c =(Caller) Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(),
-				new Class[] {Caller.class}, new MyInvocationHandler());
-		
-		c.call();
+//		System.out.println(CallerSensitiveClassTest.class.getClassLoader());
+//		CallerSensitiveClass test = new CallerSensitiveClass();
+//		//test.callerSensitiveMethod();
+//		
+//		//通过双重反射方式调用
+//		
+//		Caller c =(Caller) Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(),
+//				new Class[] {Caller.class}, new MyInvocationHandler());
+//		
+//		c.call();
 		
 		
 		
