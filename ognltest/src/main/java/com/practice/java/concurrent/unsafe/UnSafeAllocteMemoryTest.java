@@ -12,7 +12,7 @@ import sun.misc.Unsafe;
  * @date 2019年2月25日
  *
  */
-public class UnSafeArrayTest {
+public class UnSafeAllocteMemoryTest {
 
 	public static void main(String[] args) {
 
