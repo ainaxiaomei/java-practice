@@ -1,4 +1,4 @@
-package com.practice.spark;
+package com.practice.spark.RDD;
 
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.SparkSession;
@@ -22,7 +22,6 @@ public class SparkTest {
 	    long numBs = logData.filter(s -> s.contains("b")).count();
 
 	    System.out.println(" --- Lines with a: " + numAs + ", lines with b: " + numBs);
-
 	    spark.stop();
 		
 	}

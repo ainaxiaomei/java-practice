@@ -1,4 +1,4 @@
-package com.practice.spark;
+package com.practice.spark.RDD;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -8,13 +8,12 @@ import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.FlatMapFunction;
-import org.apache.spark.api.java.function.Function;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
 
 import scala.Tuple2;
 
-public class SparkRDDTest {
+public class SparkRDDWordCount {
 	
 	
 	public static void main(String[] args) {
