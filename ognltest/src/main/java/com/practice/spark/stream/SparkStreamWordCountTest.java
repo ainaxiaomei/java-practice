@@ -9,15 +9,15 @@ import org.apache.spark.streaming.api.java.JavaStreamingContext;
 import scala.Tuple2;
 
 
-public class SparkStreamTest {
+public class SparkStreamWordCountTest {
 	
 	public static void main(String[] args) throws InterruptedException {
 		
 		SparkConf conf = new SparkConf();
-		JavaStreamingContext jssc = new JavaStreamingContext(conf, Durations.seconds(1));
+		JavaStreamingContext jssc = new JavaStreamingContext(conf, Durations.seconds(3));
 		
-		jssc.socketTextStream("0.0.0.0", 9999).flatMap((String line)-> {
-			return Arrays.asList(line.split("")).iterator();
+		jssc.socketTextStream("192.168.2.3", 9999).flatMap((String line)-> {
+			return Arrays.asList(line.split(" ")).iterator();
 		}).mapToPair((String str)->{
 			
 			return new Tuple2<>(str,1);

@@ -12,7 +12,7 @@ public class Start {
 		
 		Tomcat tomcat = new Tomcat();
 		tomcat.setPort(8787);
-		Context context = tomcat.addWebapp("/tomcat-spring", "D:\\webapp");
+		Context context = tomcat.addWebapp("/tomcat-spring", "D:\\sunqi\\web");
 		
 		/**
 		 * 设置spring listener

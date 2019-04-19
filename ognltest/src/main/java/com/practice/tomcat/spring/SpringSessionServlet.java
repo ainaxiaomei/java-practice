@@ -19,7 +19,6 @@ public class SpringSessionServlet extends HttpServlet {
 		
 		System.out.println("所有Filter : " + req.getServletContext());
 		System.out.println("经过SessionRepositoryRequestWrapper过滤器后的request :" + req.getClass());
-		
 		/**
 		 * 使用session。此处getSession获取到的不是javaee的httpSession对象
 		 */

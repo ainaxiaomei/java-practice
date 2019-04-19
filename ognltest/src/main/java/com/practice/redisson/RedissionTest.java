@@ -1,5 +1,7 @@
 package com.practice.redisson;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 import org.redisson.Redisson;
@@ -9,6 +11,8 @@ import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
 import org.redisson.config.SingleServerConfig;
 import org.redisson.config.TransportMode;
+
+import com.practice.zookeeper.Executor;
 
 public class RedissionTest {
 
@@ -23,12 +27,16 @@ public class RedissionTest {
 		
 		RLock lock = redisson.getLock("mylock");
 		lock.lock();
-		
 		System.out.println("RedissionTest get lock !");
+		lock.lock();
+		System.out.println("RedissionTest get lock !");
+		
+		
 		TimeUnit.SECONDS.sleep(20);
 		
-		lock.unlock();
-		System.out.println("RedissionTest release lock !");
+		//redisson.getLock("asdf").lock();
+		//lock.unlock();
+		//System.out.println("RedissionTest release lock !");
 		
 
 	}
