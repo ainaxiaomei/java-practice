@@ -1,4 +1,4 @@
-package com.practice.dubbo.zookeeper.provider;
+package com.practice.dubbo.registry.zookeeper.provider;
 
 public class GreetingServiceImpl implements IGreetingService {
 

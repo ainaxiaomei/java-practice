@@ -1,4 +1,4 @@
-package com.practice.dubbo.muticast.provider;
+package com.practice.dubbo.registry.muticast.provider;
 
 public interface GreetingService {
 

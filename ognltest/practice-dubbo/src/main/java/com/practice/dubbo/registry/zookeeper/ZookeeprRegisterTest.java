@@ -1,10 +1,11 @@
-package com.practice.dubbo.zookeeper;
+package com.practice.dubbo.registry.zookeeper;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.practice.dubbo.zookeeper.provider.IGreetingService;
+import com.practice.dubbo.registry.zookeeper.provider.IGreetingService;
+
 
 
 public class ZookeeprRegisterTest {

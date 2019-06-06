@@ -1,4 +1,4 @@
-package com.practice.dubbo.muticast;
+package com.practice.dubbo.registry.muticast;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.practice.dubbo.muticast.provider.GreetingService;
+import com.practice.dubbo.registry.muticast.provider.GreetingService;
 
 public class MutilcastRegisterTest {
 	@Before
