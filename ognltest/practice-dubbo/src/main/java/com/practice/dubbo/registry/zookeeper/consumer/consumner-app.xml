@@ -5,7 +5,7 @@
        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
 	<dubbo:consumer registry="zooRegister" >
-	<dubbo:reference id="greetingService" interface="com.practice.dubbo.zookeeper.provider.IGreetingService"></dubbo:reference>
+	<dubbo:reference id="greetingService" interface="com.practice.dubbo.registry.zookeeper.provider.IGreetingService"></dubbo:reference>
 	</dubbo:consumer>
     
     <dubbo:application name="consumer"></dubbo:application>

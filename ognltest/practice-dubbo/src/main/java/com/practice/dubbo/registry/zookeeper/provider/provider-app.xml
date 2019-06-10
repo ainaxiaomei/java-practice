@@ -3,8 +3,8 @@
 	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns="http://www.springframework.org/schema/beans"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd  http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-	<dubbo:service interface="com.practice.dubbo.zookeeper.provider.IGreetingService"
-		class="com.practice.dubbo.zookeeper.provider.GreetingServiceImpl" 
+	<dubbo:service interface="com.practice.dubbo.registry.zookeeper.provider.IGreetingService"
+		class="com.practice.dubbo.registry.zookeeper.provider.GreetingServiceImpl" 
 		registry="zooRegister">
 		
 	</dubbo:service>
