@@ -162,4 +162,38 @@
 			</exclusions>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ssh</artifactId>
+				<version>2.8</version>
+			</extension>
+		</extensions>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>wagon-maven-plugin</artifactId>
+				<version>1.0</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>upload-single</goal>
+						</goals>
+						<configuration>
+							<serverId>linux-server-192.168.2.3</serverId>
+							<!-- serverId即上一步中在settings.xml中配置的service的id -->
+							<fromFile>target/practice-dubbo-springboot-1.0.0-SNAPSHOT.jar</fromFile>
+							<!-- 要上传到服务器的文件，一般来说是jar或者war包 -->
+							<url>scp://192.168.2.3/home/sunqi/java-workspace/dubbo-springboot</url>
+							<!-- 配置服务器的地址以及文件上传的目录。 -->
+						</configuration>
+					</execution>
+				</executions>
+
+			</plugin>
+		</plugins>
+	</build>
 </project>
