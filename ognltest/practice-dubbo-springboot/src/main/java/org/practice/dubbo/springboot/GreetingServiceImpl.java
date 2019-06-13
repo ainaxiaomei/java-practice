@@ -3,11 +3,11 @@ package org.practice.dubbo.springboot;
 import org.apache.dubbo.config.annotation.Service;
 
 @Service
-public class GreetingServiceImpl implements GreetingService{
+public class GreetingServiceImpl implements IGreetingService {
 
 	@Override
-	public String greet(String str) {
-		return "hello " + str;
+	public String greet() {
+		return "hello!";
 	}
 
 }
