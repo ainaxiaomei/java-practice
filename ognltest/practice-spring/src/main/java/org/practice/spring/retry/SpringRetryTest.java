@@ -1,4 +1,4 @@
-package com.practice.spring.retry;
+package org.practice.spring.retry;
 
 import org.springframework.retry.RetryCallback;
 import org.springframework.retry.RetryContext;

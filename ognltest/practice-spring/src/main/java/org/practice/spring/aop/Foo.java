@@ -1,4 +1,4 @@
-package com.practice.spring.aop;
+package org.practice.spring.aop;
 
 public class Foo implements IFoo {
 

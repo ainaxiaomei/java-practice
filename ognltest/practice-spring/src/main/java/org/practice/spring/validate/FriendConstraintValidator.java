@@ -1,4 +1,4 @@
-package com.practice.spring.validate;
+package org.practice.spring.validate;
 
 import java.lang.annotation.Annotation;
 import java.util.List;

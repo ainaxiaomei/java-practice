@@ -1,4 +1,4 @@
-package com.practice.spring.validate;
+package org.practice.spring.validate;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
