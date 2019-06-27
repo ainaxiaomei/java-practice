@@ -57,6 +57,8 @@ public class RPCClient implements AutoCloseable {
         final BlockingQueue<String> response = new ArrayBlockingQueue<>(1);
 
         String ctag = channel.basicConsume(replyQueueName, true, (consumerTag, delivery) -> {
+        	
+        	System.out.println("--- listenenr thread " + Thread.currentThread());
             if (delivery.getProperties().getCorrelationId().equals(corrId)) {
             	
             	String res = new String(delivery.getBody(), "UTF-8");
@@ -65,6 +67,9 @@ public class RPCClient implements AutoCloseable {
             }
         }, consumerTag -> {
         });
+        
+        
+        System.out.println("--- out thread " + Thread.currentThread());
 
         String result = response.take();
         channel.basicCancel(ctag);
