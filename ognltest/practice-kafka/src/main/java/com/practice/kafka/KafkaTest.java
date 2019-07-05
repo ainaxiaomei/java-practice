@@ -20,8 +20,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.PartitionInfo;
 import org.apache.kafka.common.serialization.StringSerializer;
-import org.apache.storm.kafka.KafkaConfig;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class KafkaTest {
 
@@ -118,6 +117,7 @@ public class KafkaTest {
 		props.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
 		props.setProperty(ProducerConfig.ACKS_CONFIG, "1");
 		props.setProperty(ProducerConfig.RETRIES_CONFIG, "4");
+		
 		
 		KafkaProducer<String, String> kafka = new KafkaProducer<>(props);
 		Future<RecordMetadata> fu =kafka.send(new ProducerRecord<String, String>("sunqi", "sync-sunqi"));

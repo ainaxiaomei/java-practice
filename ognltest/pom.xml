@@ -21,6 +21,7 @@
     <module>practice-protobuf</module>
     <module>practice-spring</module>
     <module>practice-storm</module>
+    <module>practice-kafka</module>
   </modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,12 +49,7 @@
 			<artifactId>btrace-client</artifactId>
 			<version>1.2.3</version>
 		</dependency>
-
-		<dependency>
-			<groupId>org.apache.kafka</groupId>
-			<artifactId>kafka-clients</artifactId>
-			<version>1.0.0</version>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.elasticsearch.client</groupId>
 			<artifactId>elasticsearch-rest-high-level-client</artifactId>
