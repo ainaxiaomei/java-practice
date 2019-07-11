@@ -7,7 +7,6 @@ import java.util.Properties;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
-import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -19,8 +18,8 @@ import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.PartitionInfo;
-import org.apache.kafka.common.serialization.StringSerializer;
-import org.testng.annotations.Test;
+import org.apache.kafka.common.TopicPartition;
+import org.junit.Test;
 
 public class KafkaTest {
 
@@ -169,7 +168,7 @@ public class KafkaTest {
 	@Test
 	public void kafkaConsumerTest() {
 		Properties props = new Properties();
-		props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.5.23:9092");
+		props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.2.3:9092");
 		props.put("group.id", "test");
 		props.put("enable.auto.commit", "true");
 		props.put("auto.commit.interval.ms", "1000");
@@ -189,12 +188,17 @@ public class KafkaTest {
 		});
 		
 		
-		consumer.subscribe(Arrays.asList("sunqi"));
-		while (true) {
-			ConsumerRecords<String, String> records = consumer.poll(100);
-			for (ConsumerRecord<String, String> record : records)
-				System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value());
-		}
+		System.out.printf("assignment : %s\n",consumer.assignment());
+		consumer.poll(10);
+		ConsumerRecords<String, String> records = consumer.poll(100);
+		for (ConsumerRecord<String, String> record : records)
+			System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value());
+//		consumer.subscribe(Arrays.asList("kafka-test"));
+//		while (true) {
+//			ConsumerRecords<String, String> records = consumer.poll(100);
+//			for (ConsumerRecord<String, String> record : records)
+//				System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value());
+//		}
 
 	}
 
