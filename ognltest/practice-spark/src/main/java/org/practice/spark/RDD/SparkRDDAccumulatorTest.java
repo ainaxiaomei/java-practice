@@ -1,4 +1,4 @@
-package com.practice.spark.RDD;
+package org.practice.spark.RDD;
 
 import java.util.ArrayList;
 import java.util.List;

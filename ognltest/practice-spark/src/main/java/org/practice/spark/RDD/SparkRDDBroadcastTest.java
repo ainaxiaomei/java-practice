@@ -1,4 +1,4 @@
-package com.practice.spark.RDD;
+package org.practice.spark.RDD;
 
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.broadcast.Broadcast;

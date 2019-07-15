@@ -1,4 +1,4 @@
-package com.practice.spark.stream;
+package org.practice.spark.stream;
 
 import java.util.Arrays;
 

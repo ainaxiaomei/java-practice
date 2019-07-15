@@ -1,4 +1,4 @@
-package com.practice.spark.RDD;
+package org.practice.spark.RDD;
 
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.SparkSession;
