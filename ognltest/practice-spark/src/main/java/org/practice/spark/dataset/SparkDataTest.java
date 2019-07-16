@@ -1,9 +1,9 @@
-package org.practice.spark.RDD;
+package org.practice.spark.dataset;
 
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.SparkSession;
 
-public class SparkTest {
+public class SparkDataTest {
 	
 	public static void main(String[] args) {
 		
