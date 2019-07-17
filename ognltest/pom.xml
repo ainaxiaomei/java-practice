@@ -23,6 +23,7 @@
     <module>practice-storm</module>
     <module>practice-kafka</module>
     <module>practice-spark</module>
+    <module>practice-flink</module>
   </modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

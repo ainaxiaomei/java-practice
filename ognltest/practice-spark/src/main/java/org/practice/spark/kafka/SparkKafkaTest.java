@@ -16,6 +16,9 @@ import org.apache.spark.streaming.api.java.JavaPairInputDStream;
 import org.apache.spark.streaming.api.java.JavaStreamingContext;
 import org.apache.spark.streaming.kafka.KafkaUtils;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import kafka.serializer.StringDecoder;
 
 
@@ -46,11 +49,29 @@ public class SparkKafkaTest {
 		
 		
 		messages.map((t) -> {
-			return t;
+			
+			ObjectMapper om = new ObjectMapper();
+			Probe p = om.readValue(t._2,Probe.class);
+			return p;
 		}).print();
 		
 		jsc.start();
 		jsc.awaitTermination();
+		
+	}
+	
+	
+	public static class Probe {
+		
+		private String prober_total_time;
+
+		public String getProber_total_time() {
+			return prober_total_time;
+		}
+
+		public void setProber_total_time(String prober_total_time) {
+			this.prober_total_time = prober_total_time;
+		}
 		
 	}
 
