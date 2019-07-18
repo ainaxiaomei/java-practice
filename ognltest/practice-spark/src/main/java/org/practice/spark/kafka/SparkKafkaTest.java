@@ -50,9 +50,9 @@ public class SparkKafkaTest {
 		
 		messages.map((t) -> {
 			
-			ObjectMapper om = new ObjectMapper();
-			Probe p = om.readValue(t._2,Probe.class);
-			return p;
+//			ObjectMapper om = new ObjectMapper();
+//			Probe p = om.readValue(t._2,Probe.class);
+			return t;
 		}).print();
 		
 		jsc.start();
