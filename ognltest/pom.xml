@@ -24,6 +24,7 @@
     <module>practice-kafka</module>
     <module>practice-spark</module>
     <module>practice-flink</module>
+    <module>practice-java</module>
   </modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
