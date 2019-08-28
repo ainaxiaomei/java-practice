@@ -12,10 +12,10 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Aspect
 @Component
-@EnableAspectJAutoProxy
 public class AspectConfig {
 	
 	//使用JoinPoint来获取参数
@@ -36,23 +36,23 @@ public class AspectConfig {
 //		System.out.println(" --- before invoke , param is " + param);
 //	};
 	
-	@After(value="execution(* org.practice.spring.aop.*.*(..))")
+	@After(value="execution(* org.practice.spring.aop.FooImpl.*(..))")
 	public void afterAdvice() {
 		
 		System.out.println(" --- after invoke");
 	};
 	
-	@AfterThrowing(value="execution(* org.practice.spring.aop.*.*(..))",throwing="err")
+	@AfterThrowing(value="execution(* org.practice.spring.aop.FooImpl.*(..))",throwing="err")
 	public void afterReturnAdvice(Throwable err) {
 		System.out.println(" --- after  throwing invoke");
 	};
 	
-	@AfterReturning(value="execution(* org.practice.spring.aop.*.*(..))",returning="ret")
+	@AfterReturning(value="execution(* org.practice.spring.aop.FooImpl.*(..))",returning="ret")
 	public void afterThrowAdvice(String ret) {
 		System.out.println(" --- after  returning invoke ," + " retrun value is " + ret);
 	};
 	
-	@Around(value="execution(* org.practice.spring.aop.*.*(..))")
+	@Around(value="execution(* org.practice.spring.aop.FooImpl.*(..))")
 	public void aroundAdvice(ProceedingJoinPoint joinpoint) throws Throwable {
 		
 		System.out.println("--- before aroundAdvice");
