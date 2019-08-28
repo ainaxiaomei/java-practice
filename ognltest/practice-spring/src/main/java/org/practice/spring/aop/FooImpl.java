@@ -6,8 +6,10 @@ import org.springframework.stereotype.Component;
 public class FooImpl implements IFoo {
 
 	@Override
-	public String foo(String foo) {
-		return "i am " + foo;
+	public String foo(String name,int age) {
+		
+		System.out.println("--- do method ");
+		return "i am " + name + " age is " + age;
 	}
 
 }

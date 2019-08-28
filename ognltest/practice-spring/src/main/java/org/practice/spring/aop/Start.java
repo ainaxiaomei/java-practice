@@ -7,7 +7,7 @@ public class Start {
 	public static void main(String[] args) {
 		
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("org.practice.spring.aop");
-		System.out.println(context.getBean(IFoo.class).foo("sunqi"));
+		context.getBean(IFoo.class).foo("sunqi",120);
 		
 		
 	}

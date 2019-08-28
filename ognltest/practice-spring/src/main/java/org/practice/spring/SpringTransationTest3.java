@@ -16,18 +16,27 @@ import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 public class SpringTransationTest3 {
 	public static void main(String[] args) throws SQLException {
-		MysqlDataSource ds = new MysqlDataSource();
-		ds.setURL("jdbc:mysql://10.220.10.10:3306/test?user=root");
-		ds.setPassword("123456");
-		PlatformTransactionManager ptm = new DataSourceTransactionManager(ds);
-
-		DefaultTransactionDefinition def = new DefaultTransactionDefinition();
-		def.setName("SomeTxName");
-		def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
-		DefaultTransactionStatus transStatus = (DefaultTransactionStatus) ptm.getTransaction(def);
-		//Connection con = ds.getConnection();
-		Connection con = DataSourceUtils.getConnection(ds);
-		transStatus.getTransaction();
+//		MysqlDataSource ds = new MysqlDataSource();
+//		ds.setURL("jdbc:mysql://10.220.10.10:3306/test?user=root");
+//		ds.setPassword("123456");
+//		PlatformTransactionManager ptm = new DataSourceTransactionManager(ds);
+//
+//		DefaultTransactionDefinition def = new DefaultTransactionDefinition();
+//		def.setName("SomeTxName");
+//		def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
+//		DefaultTransactionStatus transStatus = (DefaultTransactionStatus) ptm.getTransaction(def);
+//		//Connection con = ds.getConnection();
+//		Connection con = DataSourceUtils.getConnection(ds);
+//		transStatus.getTransaction();
+		
+		DataSourceTransactionManager trans = new DataSourceTransactionManager();
+		
+		DefaultTransactionDefinition tf = new DefaultTransactionDefinition();
+		TransactionStatus ts = trans.getTransaction(tf);
+		
+		ts.setRollbackOnly();
+		
+		trans.commit(ts);
 		
 	}
 }

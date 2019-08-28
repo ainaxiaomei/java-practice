@@ -21,7 +21,11 @@ public class ArrayTest {
 		
 		System.out.println(clo.getA()==clob.getA());
 		System.out.println(clo.getStr()==clob.getStr());
+		System.out.println(clo == clob);
 		System.out.println(clo + " " + clob);
+		
+		
+		
 		
 		
 	}
