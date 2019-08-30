@@ -7,8 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class FooImpl implements IFoo {
 
 	@Override
-	@Transactional
-	public String foo(String name,int age) {
+		public String foo(String name,int age) {
 		
 		System.out.println("--- do method ");
 		return "i am " + name + " age is " + age;

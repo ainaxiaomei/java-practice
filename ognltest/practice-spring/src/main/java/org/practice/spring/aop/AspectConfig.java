@@ -26,7 +26,7 @@ public class AspectConfig {
 	};
 	*/
 	
-	@Before(value="execution(* org.practice.spring.aop.*.*(..)) && args(a1,b1)",argNames="a1,b1")
+	@Before(value="execution(* org.practice.spring.aop.*.*(..)) && args(a1,b1)")
 	public void beforeAdvice0(String a1,int b1) {
 		System.out.println(" --- before invoke , param is " + a1 + " " + b1);
 	};
