@@ -1,5 +1,6 @@
 package com.practice.kafka;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -17,6 +18,7 @@ import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.PartitionInfo;
+import org.apache.kafka.common.TopicPartition;
 import org.junit.Test;
 
 public class KafkaTest {
@@ -167,7 +169,7 @@ public class KafkaTest {
 	public void kafkaConsumerTest() {
 		Properties props = new Properties();
 		props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.2.3:9092");
-		props.put("group.id", "test");
+		props.put(ConsumerConfig.GROUP_ID_CONFIG, "test");
 		props.put("enable.auto.commit", "true");
 		props.put("auto.commit.interval.ms", "1000");
 		props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
@@ -180,23 +182,24 @@ public class KafkaTest {
 		
 		KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
 		
-		Map<String,List<PartitionInfo>> map = consumer.listTopics();
-		map.forEach((topic,list) ->{
-			System.out.println("topic : " + topic + "; " + "partition : "+ list);
-		});
-		
-		
-		System.out.printf("assignment : %s\n",consumer.assignment());
-		consumer.poll(10);
-		ConsumerRecords<String, String> records = consumer.poll(100);
-		for (ConsumerRecord<String, String> record : records)
-			System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value());
-//		consumer.subscribe(Arrays.asList("kafka-test"));
-//		while (true) {
-//			ConsumerRecords<String, String> records = consumer.poll(100);
-//			for (ConsumerRecord<String, String> record : records)
-//				System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value());
-//		}
+//		Map<String,List<PartitionInfo>> map = consumer.listTopics();
+//		map.forEach((topic,list) ->{
+//			System.out.println("topic : " + topic + "; " + "partition : "+ list);
+//		});
+//		
+//		
+//		System.out.printf("assignment : %s\n",consumer.assignment());
+//		consumer.poll(10);
+//		ConsumerRecords<String, String> records = consumer.poll(100);
+//		for (ConsumerRecord<String, String> record : records)
+//			System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value());
+		TopicPartition p = new TopicPartition("kafka-probe",3061275);
+		consumer.assign(Arrays.asList(p));
+		while (true) {
+			ConsumerRecords<String, String> records = consumer.poll(100);
+			for (ConsumerRecord<String, String> record : records)
+				System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value());
+		}
 
 	}
 
