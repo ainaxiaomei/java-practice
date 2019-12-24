@@ -34,10 +34,9 @@ public class ProtocolClient {
 					ch.pipeline().addLast(new Encoder());
 					ch.pipeline().addLast(new SimpleClientHandler());
 					
-					System.out.println(ch.pipeline());
 				}
 			})
-		    .connect(new InetSocketAddress("192.168.0.116", 9999)).sync()
+		    .connect(new InetSocketAddress("127.0.0.1", 8887)).sync()
 		    .channel().closeFuture().sync();
 		    
 	}
@@ -70,7 +69,7 @@ public class ProtocolClient {
 		public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 			
 			String data = (String)msg;
-			System.out.println(data);
+			System.out.println(" --- " + data);
 			
 		}
 		
