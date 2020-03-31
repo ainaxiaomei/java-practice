@@ -25,7 +25,9 @@
     <module>practice-spark</module>
     <module>practice-flink</module>
     <module>practice-java</module>
-  </modules>
+    <module>practic-lucene</module>
+    <module>practice-kylin</module>
+</modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<tomcat.version>8.5.2</tomcat.version>
