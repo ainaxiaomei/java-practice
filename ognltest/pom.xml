@@ -30,7 +30,7 @@
 </modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<tomcat.version>8.5.2</tomcat.version>
+		<tomcat.version>8.5.61</tomcat.version>
 	</properties>
 
 	<dependencies>
